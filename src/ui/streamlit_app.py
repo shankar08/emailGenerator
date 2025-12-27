@@ -21,9 +21,9 @@ def main():
     # -------------------------
     st.sidebar.header("User Profile")
     profile = get_profile("default")
-    name = st.sidebar.text_input("Sender name", value=profile.get("name", "Shankar"))
-    company = st.sidebar.text_input("Company", value=profile.get("company", "Stealth Startup"))
-    signature = st.sidebar.text_area("Signature", value=profile.get("signature", "Best,\nShankar"))
+    name = st.sidebar.text_input("Sender name", value=profile.get("name", "SP"))
+    company = st.sidebar.text_input("Company", value=profile.get("company", "True Startup"))
+    signature = st.sidebar.text_area("Signature", value=profile.get("signature", "Best,\nSP"))
 
     if st.sidebar.button("Save profile"):
         upsert_profile(
@@ -172,7 +172,7 @@ def main():
             st.success("Email sent (simulation).")
 
     st.markdown("---")
-    st.markdown("~ Because writing emails manually is a 2010 problem. 😄")
+    st.markdown("~ True AI power for composing email.😄")
 
 if __name__ == "__main__":
     main()
