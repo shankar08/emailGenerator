@@ -8,35 +8,47 @@ import os
 import tempfile
 import streamlit as st
 import openai
+import time
 
 from memory.json_memory import get_profile, upsert_profile
 from workflow.langgraph_flow import run_email_workflow
+from agents.input_parser_agent import InputParserAgent
+from agents.intent_detection_agent import IntentDetectionAgent
+from agents.tone_stylist_agent import ToneStylistAgent
+from agents.draft_writer_agent import DraftWriterAgent
+from agents.personalization_agent import PersonalizationAgent
+from agents.review_agent import ReviewAgent
+from agents.router_agent import RouterAgent
+from integrations.llm_client import make_openai_llm
 
 def main():
-    st.set_page_config(page_title="Email Generator", layout="wide")
-    st.title("Email Generator")
+    st.set_page_config(page_title="AI Powered Email Generator", layout="wide")
+    st.title("AI Powered Email Generator")
 
     # -------------------------
-    # Sidebar: User Profile
+    # Top Navbar: User Profile
     # -------------------------
-    st.sidebar.header("User Profile")
     profile = get_profile("default")
-    name = st.sidebar.text_input("Sender name", value=profile.get("name", "SP"))
-    company = st.sidebar.text_input("Company", value=profile.get("company", "True Startup"))
-    signature = st.sidebar.text_area("Signature", value=profile.get("signature", "Best,\nSP"))
-
-    if st.sidebar.button("Save profile"):
-        upsert_profile(
-            "default",
-            {
-                "name": name,
-                "company": company,
-                "signature": signature,
-                "preferred_tone": profile.get("preferred_tone", "formal"),
-                "sent_examples": profile.get("sent_examples", []),
-            },
-        )
-        st.sidebar.success("Saved.")
+    with st.form("profile_form", clear_on_submit=False):
+        nav1, nav2, nav3, nav4 = st.columns([2, 2, 3, 2])
+        with nav1:
+            st.markdown("#### User Profile")
+        with nav2:
+            name = st.text_input("Sender name", value=profile.get("name", "SP"), key="name_input")
+        with nav3:
+            company = st.text_input("Company", value=profile.get("company", "True Startup"), key="company_input")
+        submitted = st.form_submit_button("Save profile")
+        if submitted:
+            upsert_profile(
+                "default",
+                {
+                    "name": name,
+                    "company": company,
+                    "preferred_tone": profile.get("preferred_tone", "formal"),
+                    "sent_examples": profile.get("sent_examples", []),
+                },
+            )
+            st.success("Profile saved.")
 
     # -------------------------
     # Main layout
@@ -97,26 +109,17 @@ def main():
                 # Initialize state
                 state = {"messages": [{"content": full_text}], "flow": []}
 
-                # Agents called in order (same as run_email_workflow)
-                from workflow.langgraph_flow import (
-                    input_parser_agent,
-                    intent_detection_agent,
-                    tone_stylist_agent,
-                    draft_writer_agent,
-                    personalization_agent,
-                    review_agent,
-                    router_agent,
-                    make_openai_llm
-                )
+
                 llm = make_openai_llm()
+
                 agents = [
-                    ("input_parser_agent", input_parser_agent),
-                    ("intent_detection_agent", lambda s: intent_detection_agent(s, llm)),
-                    ("tone_stylist_agent", tone_stylist_agent),
-                    ("draft_writer_agent", lambda s: draft_writer_agent(s, llm)),
-                    ("personalization_agent", personalization_agent),
-                    ("review_agent", lambda s: review_agent(s, llm)),
-                    ("router_agent", router_agent),
+                    ("input_parser_agent", lambda s: InputParserAgent.run(s)),
+                    ("intent_detection_agent", lambda s: IntentDetectionAgent.run(s, llm)),
+                    ("tone_stylist_agent", lambda s: ToneStylistAgent.run(s)),
+                    ("draft_writer_agent", lambda s: DraftWriterAgent.run(s, llm)),
+                    ("personalization_agent", lambda s: PersonalizationAgent.run(s)),
+                    ("review_agent", lambda s: ReviewAgent.run(s, llm)),
+                    ("router_agent", lambda s: RouterAgent.run(s)),
                 ]
 
                 for i, (name, fn) in enumerate(agents):
@@ -149,7 +152,15 @@ def main():
             st.info("No email generated yet.")
 
         subject_edit = st.text_input("Subject", subject)
-        body_edit = st.text_area("Body", body, height=400)
+        # body_edit = st.text_area("Body", body, height=400)
+        body_placeholder = st.empty()
+        streamed_body = ""
+        for char in body:
+            streamed_body += char
+            body_placeholder.text_area("Body", streamed_body, height=400)
+            time.sleep(0.01)  # Adjust speed as needed
+
+        body_edit = streamed_body
 
         st.download_button(
             "Download .txt",
