@@ -24,9 +24,9 @@ MEMORY_PATH = Path(__file__).parent / "user_profiles.json"
 # -----------------------------
 # GitHub config (via Streamlit secrets)
 # -----------------------------
-# GITHUB_TOKEN = st.secrets.get("GITHUB_TOKEN")
-# REPO_NAME = st.secrets.get("GITHUB_REPO")
-# FILE_PATH_IN_REPO = "src/memory/user_profiles.json"
+GITHUB_TOKEN = st.secrets.get("GITHUB_TOKEN")
+REPO_NAME = st.secrets.get("GITHUB_REPO")
+FILE_PATH_IN_REPO = "src/memory/user_profiles.json"
 
 # -----------------------------
 # Local JSON helpers
@@ -80,4 +80,4 @@ def upsert_profile(user_id: str, profile: Dict[str, Any]) -> None:
     data = load_profiles()
     data[user_id] = profile
     save_profiles(data)        # update local JSON
-    # push_to_github(data)       # sync to GitHub
+    push_to_github(data)       # sync to GitHub
