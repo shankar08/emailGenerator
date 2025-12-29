@@ -106,7 +106,13 @@ Email-Generator/
 │   │   ├── streamlit_app.py       # UI components, forms, preview, export
 │   │
 │   ├── agents/
-│   │   ├── agents.py              # input parsing, intent detection, tone stylist, draft writer, personalization, review & routing agents
+│   │   ├── draft_writer_agent.py              #  draft writer agent
+|   |   |── input_parser_agent.py              #  input parser agent
+│   │   ├── intent_decision_agent.py           #  intent decision agent
+│   │   ├── personalization_agent.py           #  personalization agent
+│   │   ├── review_agent.py                    #  review agent
+│   │   ├── router_agent.py                    #  rounter agent
+│   │   ├── tone_stylist_agent.py              #  tone stylist agent
 │   │
 │   ├── example_voice_inputs/
 │   │   ├── assertive.m4a          # assertive, friendly, profesional voice input files

@@ -1,30 +1,7 @@
 {
   "default": {
     "sent_examples": [
-      {
-        "subject": "Thank You for the Interview Opportunity, Emma",
-        "body": "Hi Emma, I hope this email finds you well. I wanted to express my gratitude for the opportunity to interview with you. I appreciate your time and consideration throughout the interview process. Please feel free to reach out if you need any further information from my end. Thank you once again. Best regards, SP"
-      },
-      {
-        "subject": "Follow-Up on Product Strategy Meeting",
-        "body": "Hi [Recipient's Name],\n\nI hope this message finds you well. I would like to extend my sincere gratitude for your time and valuable insights during our recent 45-minute product strategy meeting. Your expertise greatly contributed to our discussions.\n\nTo summarize our key discussion points:\n1. We agreed on the primary objectives for the upcoming quarter, focusing on enhancing user engagement and streamlining our development processes.\n2. The decision was made to prioritize the integration of feedback from our beta users into the next product iteration.\n3. We identified potential challenges regarding resource allocation and agreed to explore solutions collaboratively.\n\nNext steps include:\n- **Action Item 1**: Compile user feedback and present findings by [Tentative Date]. **Owner**: [Owner's Name].\n- **Action Item 2**: Develop a resource allocation plan by [Tentative Date]. **Owner**: [Owner's Name].\n- **Action Item 3**: Schedule a follow-up meeting to review progress on [Tentative Date]. **Owner**: SP.\n\nI appreciate your commitment to ensuring alignment and accountability as we move forward. Please feel free to reach out if you have any further insights or questions.\n\nSincerely,\nSP"
-      },
-      {
-        "subject": "Urgent: Action Required on Overdue Deliverable",
-        "body": "Hi [Recipient's Name],\n\nI hope this message finds you well. I am writing to address the overdue deliverable that was originally due on [insert original deadline]. The delay is currently impacting our project timeline and overall objectives.\n\nTo move forward, I require the completed deliverable by [insert new deadline]. It is crucial that we adhere to this timeline to mitigate further delays and ensure accountability.\n\nPlease confirm your commitment to this deadline and provide an update on your progress by [insert specific date]. I appreciate your immediate attention to this matter.\n\nThank you for your cooperation.\n\nBest regards,\nSP"
-      },
-      {
-        "subject": "Join Us for a Festive Secret Santa and Christmas Party!",
-        "body": "Hi [Friend's Name],\n\nI hope you are doing well! With the holiday season upon us, I am filled with excitement and joy, and I would love for you to join in on the festivities this year.\n\nI am organizing a Secret Santa exchange, which is always a blast! It is a fun way for us to spread some holiday cheer by anonymously giving gifts to one another. Each person will draw a name and buy a small gift for that person, keeping it a surprise until the big reveal! I think it will be a wonderful way to celebrate our friendship and enjoy the spirit of giving.\n\nAdditionally, I am hosting a Christmas party on [insert date and time]. It will be a relaxed gathering with good food, music, and plenty of holiday cheer. I would be thrilled if you could come!\n\nPlease feel free to ask if you have any questions or need more details. I genuinely hope you can join us for both the Secret Santa and the party!\n\nLooking forward to hearing from you soon!\n\nWarm holiday wishes,\nSP\n"
-      },
-      {
-        "subject": "A Difficult Decision",
-        "body": "Hi [Name],\n\nI hope this message finds you well. I am writing to discuss an important matter regarding our relationship. After careful consideration, I have come to the conclusion that it is best for both of us to part ways. This decision has not been made lightly, and I believe it is in our best interests to pursue our individual paths.\n\nI appreciate the time we have spent together and the memories we have created. I wish you all the best in your future endeavors.\n\nSincerely,\nSP"
-      },
-      {
-        "subject": "Invitation to My Dog's Welcome Ceremony",
-        "body": "Hi [Name],\n\nI hope this message finds you well. I am writing to invite you to the welcome ceremony for my dog. It will be a delightful occasion, and I would be honored to have you join us. \n\nPlease kindly bring only treats for the dog, as we would like to keep the focus on making this a special day for our furry friend.\n\nI look forward to your presence at this joyful event.\n\nSincerely,\nSP"
-      }
+   
     ]
   }
 }
