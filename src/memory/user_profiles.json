@@ -1,7 +1,30 @@
 {
   "default": {
     "sent_examples": [
-   
+      {
+        "subject": "You're Invited to a Paw-some Wedding!",
+        "body": "Hey furry friends!\n\nWe’re throwing a wedding and we’d love for all you pups in town to come celebrate with us! It’s going to be a tail-wagging good time with treats, games, and plenty of belly rubs.\n\nMark your calendars and get ready to party! We can’t wait to see all your wagging tails!\n\nCheers,\nSP"
+      },
+      {
+        "subject": "Regarding Our Professional Relationship",
+        "body": "Hi [Name],\n\nI hope this message finds you well. I am writing to express my feelings regarding our interactions. I believe it is important to be candid, and I must convey that I do not feel a positive connection in our professional relationship.\n\nI appreciate your understanding in this matter.\n\nSincerely,\nSP"
+      },
+      {
+        "subject": "Invitation to Join a Boat Ride",
+        "body": "Hi [Name],\n\nI hope this message finds you well. I am writing to extend an invitation for you to join us on a boat ride. It promises to be a delightful experience, and I believe it would be a wonderful opportunity for us to connect.\n\nPlease let me know if you are available to join us. I look forward to your response.\n\nBest regards,\nSP"
+      },
+      {
+        "subject": "Greetings",
+        "body": "Hi Neil,\n\nI hope this message finds you well. I wanted to take a moment to extend my greetings and express my hope for a fruitful collaboration in the future.\n\nBest regards,\nSP"
+      },
+      {
+        "subject": "You're Invited to Neil's 3rd Birthday Bash!",
+        "body": "Hey everyone!\n\nI hope you’re all doing great! I’m excited to invite you to Neil’s 3rd birthday party! We’re having a little get-together to celebrate, and it wouldn’t be the same without you.\n\nDate: [Insert Date]  \nTime: [Insert Time]  \nLocation: [Insert Location]\n\nJust a quick note—please don’t bring any gifts. Your presence is the best present we could ask for!\n\nLet me know if you can make it. Looking forward to seeing you all there!\n\nCheers,  \nSP"
+      },
+      {
+        "subject": "Request to Send Car to Your Residence",
+        "body": "Hi [Friend's Name],\n\nI hope this message finds you well. I am writing to request your assistance in sending my car to your residence. Please let me know if this is convenient for you and if there are any specific arrangements you would prefer.\n\nThank you for your help.\n\nSincerely,\nSP"
+      }
     ]
   }
 }
