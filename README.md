@@ -1,47 +1,3 @@
-## 7. Prompt Logic
-
-The app uses a structured prompt logic to extract and transform user input into a high-quality email draft. Here’s how the prompt flows through the system:
-
-1. **User Input:**
-
-   - The user provides a text or voice prompt describing the email’s intent, recipient, tone, and any constraints (e.g., "to: Alice\nFollow-up on meeting... tone: formal").
-
-2. **Parsing:**
-
-   - The Input Parser agent uses regular expressions and heuristics to extract fields such as recipient name, tone, and constraints from the raw prompt.
-
-3. **Intent Detection:**
-
-   - The Intent Detector agent classifies the email type (e.g., outreach, follow-up, apology) using a language model and a system prompt that restricts output to a set of known intents.
-
-4. **Prompt Construction for LLM:**
-
-   - The Draft Writer agent assembles a structured prompt for the LLM, including:
-     - User’s original prompt
-     - Detected intent
-     - Tone instructions (from the Tone Stylist agent)
-     - Sender and recipient details
-     - Any constraints (e.g., length, style)
-   - Example system prompt:
-     ```text
-     User Prompt: {prompt}
-     Intent: {intent}
-     Tone Instructions: {tone_instructions}
-     Sender Profile: name: {sender_name}, company: {profile_company}
-     Recipient: {recipient}
-     Constraints: {constraints}
-     Return a JSON object exactly with fields: subject, body.
-     ```
-
-5. **Personalization and Review:**
-
-   - The generated draft is further personalized (e.g., inserting sender name, signature) and reviewed for grammar, tone, and clarity.
-
-6. **Output:**
-   - The final draft is presented to the user for editing, export, or saving to history.
-
----
-
 # Agentic AI Email Generator
 
 ## 1. Introduction
@@ -151,6 +107,50 @@ Email-Generator/
 ├── data/
 │   └── tone_samples.json
 ```
+
+---
+
+## 7. Prompt Logic
+
+The app uses a structured prompt logic to extract and transform user input into a high-quality email draft. Here’s how the prompt flows through the system:
+
+1. **User Input:**
+
+   - The user provides a text or voice prompt describing the email’s intent, recipient, tone, and any constraints (e.g., "to: Alice\nFollow-up on meeting... tone: formal").
+
+2. **Parsing:**
+
+   - The Input Parser agent uses regular expressions and heuristics to extract fields such as recipient name, tone, and constraints from the raw prompt.
+
+3. **Intent Detection:**
+
+   - The Intent Detector agent classifies the email type (e.g., outreach, follow-up, apology) using a language model and a system prompt that restricts output to a set of known intents.
+
+4. **Prompt Construction for LLM:**
+
+   - The Draft Writer agent assembles a structured prompt for the LLM, including:
+     - User’s original prompt
+     - Detected intent
+     - Tone instructions (from the Tone Stylist agent)
+     - Sender and recipient details
+     - Any constraints (e.g., length, style)
+   - Example system prompt:
+     ```text
+     User Prompt: {prompt}
+     Intent: {intent}
+     Tone Instructions: {tone_instructions}
+     Sender Profile: name: {sender_name}, company: {profile_company}
+     Recipient: {recipient}
+     Constraints: {constraints}
+     Return a JSON object exactly with fields: subject, body.
+     ```
+
+5. **Personalization and Review:**
+
+   - The generated draft is further personalized (e.g., inserting sender name, signature) and reviewed for grammar, tone, and clarity.
+
+6. **Output:**
+   - The final draft is presented to the user for editing, export, or saving to history.
 
 ---
 
