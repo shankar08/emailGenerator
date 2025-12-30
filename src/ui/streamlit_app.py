@@ -163,7 +163,7 @@ def main():
         body_edit = streamed_body
 
         st.download_button(
-            "Download .txt",
+            "Export .txt",
             data=f"Subject: {subject_edit}\n\n{body_edit}",
             file_name="email_draft.txt",
             mime="text/plain",
@@ -176,14 +176,7 @@ def main():
             upsert_profile("default", prof)
             st.success("Saved.")
 
-        if st.button("Simulate send", disabled=not last):
-            prof = get_profile("default")
-            prof.setdefault("sent_examples", []).append({"subject": subject_edit, "body": body_edit})
-            upsert_profile("default", prof)
-            st.success("Email sent (simulation).")
 
-    st.markdown("---")
-    st.markdown("~ True AI power for composing email.😄")
 
 if __name__ == "__main__":
     main()
