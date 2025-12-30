@@ -1,5 +1,8 @@
 {
   "default": {
+    "name": "SP",
+    "company": "True Startup",
+    "preferred_tone": "formal",
     "sent_examples": [
       {
         "subject": "You're Invited to a Paw-some Wedding!",
