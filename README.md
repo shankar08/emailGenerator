@@ -163,7 +163,3 @@ Sample voice input files are available in `src/example_voice_inputs/`.
 ## Deployment
 
 **Streamlit Cloud:** https://appapppy-tp7ghummmwsicrrwbvraws.streamlit.app
-
-```
-
-```
