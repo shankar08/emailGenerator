@@ -63,6 +63,10 @@
       {
         "subject": "Welcome to True Startup",
         "body": "Dear Team,\n\nWelcome to True Startup! We are excited to have you on board. Please complete your onboarding documentation by the end of this week to ensure a smooth start. If you have any questions, do not hesitate to reach out.\n\nBest regards,\nSP"
+      },
+      {
+        "subject": "Farewell and Best Wishes",
+        "body": "Hi Team,\n\nI hope this message finds you well. As we approach the end of the year, I would like to take a moment to acknowledge and bid farewell to those who have decided to resign before the year concludes. Your contributions to True Startup have been invaluable, and your presence will be greatly missed.\n\nI wish you all the best in your future endeavors and hope that you find success and fulfillment in your next chapters.\n\nThank you for your hard work and dedication.\n\nSincerely,\nSP"
       }
     ]
   }
