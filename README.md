@@ -18,14 +18,12 @@
 5. [Architecture](#architecture)
 6. [Prompt Logic](#prompt-logic)
 7. [Usage](#usage)
-8. [Installation & Setup](#installation--setup)
-9. [Live Agent Tracing](#live-agent-tracing)
-10. [Voice Input Support](#voice-input-support)
-11. [Example Voice Inputs](#example-voice-inputs)
-12. [Deployment](#deployment)
-13. [Requirements](#requirements)
-14. [License](#license)
-15. [Author](#author)
+8. [Requirements](#requirements)
+9. [Installation & Setup](#installation--setup)
+10. [Live Agent Tracing](#live-agent-tracing)
+11. [Voice Input Support](#voice-input-support)
+12. [Example Voice Inputs](#example-voice-inputs)
+13. [Deployment](#deployment)
 
 ---
 
@@ -84,7 +82,7 @@ graph TD
 
 ---
 
-## 6. Architecture
+## Architecture
 
 The application is organized as follows:
 
@@ -124,7 +122,7 @@ Email-Generator/
 
 ---
 
-## 7. Prompt Logic
+## Prompt Logic
 
 The app uses a structured prompt logic to extract and transform user input into a high-quality email draft. Here’s how the prompt flows through the system:
 
@@ -177,22 +175,6 @@ The app uses a structured prompt logic to extract and transform user input into 
     5.	Review agent traces
     6.	Edit, export, or save the draft
 
-## Example Voice Intents
-
-Sample voice input files are available in `src/example_voice_inputs/`.
-
----
-
-## Live Agent Tracing
-
-**The UI displays real-time traces for each agent, including:**
-• Agent name
-• Execution duration
-• Timestamp
-• Input and output keys
-
-This provides transparency and simplifies debugging.
-
 ## Requirements
 
     •	Python 3.10+
@@ -206,13 +188,27 @@ This provides transparency and simplifies debugging.
 - cd agentic-email-generator
 - pip install -r requirements.txt
 
-## Set environment variable:
+  **Set environment variable:**
 
 - export OPENAI_API_KEY="your_api_key"
 
 **Run Locally**
 
 - streamlit run streamlit_app.py
+
+## Live Agent Tracing
+
+**The UI displays real-time traces for each agent, including:**
+• Agent name
+• Execution duration
+• Timestamp
+• Input and output keys
+
+This provides transparency and simplifies debugging.
+
+## Example Voice Intents
+
+Sample voice input files are available in `src/example_voice_inputs/`.
 
 ## Deployment
 
