@@ -4,7 +4,6 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B)
 ![LangGraph](https://img.shields.io/badge/LangGraph-Agentic%20Workflow-6A5ACD)
 ![OpenAI](https://img.shields.io/badge/OpenAI-LLM-black)
-![License](https://img.shields.io/badge/License-MIT-green)
 ![Status](https://img.shields.io/badge/Status-Active-success)
 
 ---

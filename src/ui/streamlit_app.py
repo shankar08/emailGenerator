@@ -6,10 +6,12 @@ Shows only the currently executing agent's output.
 
 import os
 import tempfile
+from langsmith import traceable
 import streamlit as st
 import openai
 import time
 
+from eval.eval_runner import validate_scores
 from memory.json_memory import get_profile, upsert_profile
 from workflow.langgraph_flow import run_email_workflow
 from agents.input_parser_agent import InputParserAgent
@@ -21,13 +23,84 @@ from agents.review_agent import ReviewAgent
 from agents.router_agent import RouterAgent
 from integrations.llm_client import make_openai_llm
 
+import json
+from datetime import datetime
+import re
 
+def safe_json_loads(text: str) -> dict:
+    """
+    Removes Markdown code fences and parses JSON safely.
+    """
+    if not text:
+        raise ValueError("Empty response from judge")
+
+    # Remove ```json ... ``` or ``` ... ```
+    cleaned = re.sub(r"```(?:json)?", "", text)
+    cleaned = cleaned.replace("```", "").strip()
+
+    return json.loads(cleaned)
+
+@traceable(run_type="evaluation")
+def judge_email(user_input: str, tone: str, subject: str, body: str):
+    llm = make_openai_llm(model="gpt-4o", temperature=0)
+
+    prompt = f"""
+        You are an expert email reviewer.
+
+        Evaluate the GENERATED EMAIL against the USER REQUEST.
+
+        IMPORTANT:
+        - Scores MUST be integers from 1 to 10 ONLY.
+        - Do NOT use any other scale.
+        - Do NOT include decimals.
+        - Do NOT exceed 10.
+
+        USER REQUEST:
+        {user_input}
+
+        REQUESTED TONE:
+        {tone}
+
+        GENERATED EMAIL:
+        Subject: {subject}
+
+        {body}
+
+        Return ONLY valid JSON with:
+        - intent_accuracy
+        - tone_alignment
+        - clarity
+        - professionalism
+        - completeness
+        - grammar
+        - overall_score
+        - explanation
+        """
+
+    response = llm.invoke(prompt)
+
+    try:
+        scores = safe_json_loads(response.content)
+    except Exception as e:
+        return {
+            "error": "Json Parse Error",
+            "raw_output": response.content,
+            "exception": str(e),
+        }
+    
+    if not validate_scores(scores):
+        return {
+            "error": "Invalid score scale",
+            "raw_output": scores,
+        }
+
+    return scores
 
 def main():
     st.set_page_config(page_title="AI Powered Email Generator", layout="wide")
     st.title("AI Powered Email Generator")
 
-    tabs = st.tabs(["Profile", "Compose & Draft"])
+    tabs = st.tabs(["Profile", "Compose & Draft", "Eval"])
 
     # Profile Tab
     with tabs[0]:
@@ -102,6 +175,20 @@ def main():
                     st.session_state["last_result"] = result
                     st.success("Email draft generated!")
 
+                    # Run evaluation
+                    draft = result.get("personalized_draft") or result.get("draft") or {}
+                    eval_result = judge_email(
+                        user_input=full_text,
+                        tone=tone_choice,
+                        subject=draft.get("subject", ""),
+                        body=draft.get("body", "")
+                    )
+
+                    st.session_state["last_eval"] = {
+                        "timestamp": datetime.utcnow().isoformat(),
+                        "scores": eval_result
+                    }
+
                     # ===========================
                     # Agent Traces Section
                     # ===========================
@@ -151,6 +238,44 @@ def main():
                 prof.setdefault("sent_examples", []).append({"subject": subject_edit, "body": body_edit})
                 upsert_profile("default", prof)
                 st.success("Draft saved to profile history.")
+
+
+    # ===========================
+    # Eval Tab
+    # ===========================
+    with tabs[2]:
+        st.header("LLM-Based Evaluation")
+
+        eval_data = st.session_state.get("last_eval")
+        last_result = st.session_state.get("last_result")
+
+        if not last_result or not eval_data:
+            st.info("Generate an email draft to view evaluation results.")
+        else:
+            scores = eval_data.get("scores", {})
+            print(f"Eval scores: {scores}")
+            if "error" in scores:
+                st.error("Evaluation failed.")
+                st.code(scores.get("raw_output", ""))
+            else:
+                col1, col2, col3 = st.columns(3)
+
+                col1.metric("Intent Accuracy", scores["intent_accuracy"])
+                col2.metric("Tone Alignment", scores["tone_alignment"])
+                col3.metric("Clarity", scores["clarity"])
+
+                col1.metric("Professionalism", scores["professionalism"])
+                col2.metric("Completeness", scores["completeness"])
+                col3.metric("Grammar", scores["grammar"])
+
+                st.divider()
+                st.metric("Overall Score", scores["overall_score"])
+
+                st.markdown("### Judge Explanation")
+                st.write(scores.get("explanation", ""))
+
+                with st.expander("Raw Evaluation JSON"):
+                    st.json(scores)
 
 if __name__ == "__main__":
     main()

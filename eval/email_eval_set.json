@@ -1,0 +1,182 @@
+[
+  {
+    "id": "eval_001",
+    "input": "Write a formal follow-up email after a product demo",
+    "tone": "formal",
+    "expected_intent": "follow_up"
+  },
+  {
+    "id": "eval_002",
+    "input": "Send an assertive reminder about an overdue task",
+    "tone": "assertive",
+    "expected_intent": "reminder"
+  },
+  {
+    "id": "eval_003",
+    "input": "Compose a casual thank-you email after a networking event",
+    "tone": "casual",
+    "expected_intent": "thank_you"
+  },
+  {
+    "id": "eval_004",
+    "input": "Draft a formal invitation to a corporate event",
+    "tone": "formal",
+    "expected_intent": "invitation"
+  },
+  {
+    "id": "eval_005",
+    "input": "Write an assertive email requesting project updates",
+    "tone": "assertive",
+    "expected_intent": "request_update"
+  },
+  {
+    "id": "eval_006",
+    "input": "Send a casual check-in email to a colleague",
+    "tone": "casual",
+    "expected_intent": "check_in"
+  },
+  {
+    "id": "eval_007",
+    "input": "Compose a formal resignation email",
+    "tone": "formal",
+    "expected_intent": "resignation"
+  },
+  {
+    "id": "eval_008",
+    "input": "Draft an assertive email addressing missed deadlines",
+    "tone": "assertive",
+    "expected_intent": "address_missed_deadlines"
+  },
+  {
+    "id": "eval_009",
+    "input": "Write a casual congratulations email for a promotion",
+    "tone": "casual",
+    "expected_intent": "congratulations"
+  },
+  {
+    "id": "eval_010",
+    "input": "Send a formal apology email for a service disruption",
+    "tone": "formal",
+    "expected_intent": "apology"
+  },
+  {
+    "id": "eval_011",
+    "input": "Compose an assertive email requesting feedback on a report",
+    "tone": "assertive",
+    "expected_intent": "request_feedback"
+  },
+  {
+    "id": "eval_012",
+    "input": "Draft a casual invitation to a team lunch",
+    "tone": "casual",
+    "expected_intent": "invitation"
+  },
+  {
+    "id": "eval_013",
+    "input": "Write a formal email introducing a new team member",
+    "tone": "formal",
+    "expected_intent": "introduction"
+  },
+  {
+    "id": "eval_014",
+    "input": "Send an assertive email outlining project expectations",
+    "tone": "assertive",
+    "expected_intent": "outline_expectations"
+  },
+  {
+    "id": "eval_015",
+    "input": "Compose a casual follow-up email after a social event",
+    "tone": "casual",
+    "expected_intent": "follow_up"
+  },
+  {
+    "id": "eval_016",
+    "input": "Draft a formal request for a meeting with a client",
+    "tone": "formal",
+    "expected_intent": "meeting_request"
+  },
+  {
+    "id": "eval_017",
+    "input": "Write an assertive email addressing team performance issues",
+    "tone": "assertive",
+    "expected_intent": "address_performance_issues"
+  },
+  {
+    "id": "eval_018",
+    "input": "Send a casual thank-you email to a mentor",
+    "tone": "casual",
+    "expected_intent": "thank_you"
+  },
+  {
+    "id": "eval_019",
+    "input": "Compose a formal email requesting sponsorship for an event",
+    "tone": "formal",
+    "expected_intent": "sponsorship_request"
+  },
+  {
+    "id": "eval_020",
+    "input": "Draft an assertive email setting deadlines for project milestones",
+    "tone": "assertive",
+    "expected_intent": "set_deadlines"
+  },
+  {
+    "id": "eval_021",
+    "input": "Write a casual invitation to a weekend getaway",
+    "tone": "casual",
+    "expected_intent": "invitation"
+  },
+  {
+    "id": "eval_022",
+    "input": "Send a formal email confirming attendance at a conference",
+    "tone": "formal",
+    "expected_intent": "attendance_confirmation"
+  },
+  {
+    "id": "eval_023",
+    "input": "Compose an assertive email requesting clarification on project scope",
+    "tone": "assertive",
+    "expected_intent": "request_clarification"
+  },
+  {
+    "id": "eval_024",
+    "input": "Draft a casual check-in email with a friend",
+    "tone": "casual",
+    "expected_intent": "check_in"
+  },
+  {
+    "id": "eval_025",
+    "input": "Write a formal email expressing interest in a job position",
+    "tone": "formal",
+    "expected_intent": "job_interest"
+  },
+  {
+    "id": "eval_026",
+    "input": "Send an assertive email addressing budget concerns",
+    "tone": "assertive",
+    "expected_intent": "address_budget_concerns"
+  },
+  {
+    "id": "eval_027",
+    "input": "Compose a casual thank-you email after receiving help",
+    "tone": "casual",
+    "expected_intent": "thank_you"
+  },
+  {
+    "id": "eval_028",
+    "input": "Draft a formal email requesting a letter of recommendation",
+    "tone": "formal",
+    "expected_intent": "recommendation_request"
+  },
+  {
+    "id": "eval_029",
+    "input": "Write an assertive email outlining the next steps for a project",
+    "tone": "assertive",
+    "expected_intent": "outline_next_steps"
+  },
+  {
+    "id": "eval_030",
+    "input": "Send a casual invitation to a movie night",
+    "tone": "casual",
+    "expected_intent": "invitation"
+  }
+]

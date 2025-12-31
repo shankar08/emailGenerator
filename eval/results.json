@@ -1,0 +1,10 @@
+{
+  "intent_accuracy": 10,
+  "tone_alignment": 8,
+  "clarity": 10,
+  "professionalism": 10,
+  "completeness": 8,
+  "grammar": 10,
+  "overall_score": 9.4,
+  "short_explanation": "The email meets the intent and tone well, with clear next steps and professional language."
+}
