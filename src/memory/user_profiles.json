@@ -59,6 +59,10 @@
       {
         "subject": "Sick Leave Notification",
         "body": "Hi [Recipient's Name],\n\nI hope this message finds you well. I am writing to formally inform you that I am unable to attend work today due to illness. I will ensure to keep you updated on my recovery and return to work as soon as possible.\n\nThank you for your understanding.\n\nSincerely,\nSP"
+      },
+      {
+        "subject": "Welcome to True Startup",
+        "body": "Dear Team,\n\nWelcome to True Startup! We are excited to have you on board. Please complete your onboarding documentation by the end of this week to ensure a smooth start. If you have any questions, do not hesitate to reach out.\n\nBest regards,\nSP"
       }
     ]
   }
