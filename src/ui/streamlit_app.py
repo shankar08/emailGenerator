@@ -60,7 +60,7 @@ def main():
             user_text = ""
             if mode == "Text":
                 user_text = st.text_area(
-                    "Describe your email intent (e.g., 'to: Alice\nFollow-up on meeting... tone: formal')",
+                    "Describe your email intent",
                     height=200,
                     help="Provide details for your email."
                 )
