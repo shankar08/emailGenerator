@@ -27,6 +27,10 @@
       {
         "subject": "Request to Send Car to Your Residence",
         "body": "Hi [Friend's Name],\n\nI hope this message finds you well. I am writing to request your assistance in sending my car to your residence. Please let me know if this is convenient for you and if there are any specific arrangements you would prefer.\n\nThank you for your help.\n\nSincerely,\nSP"
+      },
+      {
+        "subject": "Welcome to True Startup",
+        "body": "Hi everyone,\n\nI hope this message finds you well. I would like to take this opportunity to extend a warm welcome to all of you as we embark on this exciting journey together at True Startup. Your presence and contributions are highly valued, and I look forward to collaborating with each of you.\n\nPlease feel free to reach out if you have any questions or require assistance as we move forward.\n\nBest regards,\nSP"
       }
     ]
   }
