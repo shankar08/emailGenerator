@@ -1,61 +1,75 @@
 # Agentic AI Email Generator
 
-## 1. Introduction
-
-The Agentic AI Email Generator is a smart assistant designed to help professionals quickly draft, personalize, and review emails. Leveraging a multi-agent workflow and advanced language models, it produces high-quality, context-aware email drafts tailored to your needs in seconds.
-
----
-
-## 2. Features
-
-- **Rapid Email Drafting:** Compose emails in under 2 minutes.
-- **Context Awareness:** Adapts content and tone based on your input and recipient.
-- **Multiple Tones:** Choose from formal, casual, or assertive styles.
-- **Versatile Use Cases:** Supports outreach, follow-ups, internal updates, and more.
-- **Personalization & Memory:** Remembers your preferences and previous drafts.
-- **Voice Input:** Dictate your intent for hands-free drafting.
-- **Grammar & Tone Review:** Built-in review agent for clarity and correctness.
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B)
+![LangGraph](https://img.shields.io/badge/LangGraph-Agentic%20Workflow-6A5ACD)
+![OpenAI](https://img.shields.io/badge/OpenAI-LLM-black)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Status](https://img.shields.io/badge/Status-Active-success)
 
 ---
 
-## 3. How It Works
+## Table of Contents
 
-The app uses a modular, multi-agent system to process your input and generate polished emails:
-
-1. **Input Parser:** Extracts intent, recipient, tone, and constraints from your prompt.
-2. **Intent Detector:** Classifies your email (outreach, follow-up, apology, etc.).
-3. **Tone Stylist:** Adjusts language style to your selected tone.
-4. **Draft Writer:** Generates the main email body.
-5. **Personalization Agent:** Inserts your name, signature, and context.
-6. **Review Agent:** Checks grammar, tone, and coherence.
-7. **Router Agent:** Handles fallback logic and memory updates.
-
----
-
-## 4. Usage
-
-1. Launch the app (locally or on Streamlit Cloud).
-2. Select your desired **email tone** (formal, casual, assertive).
-3. Enter or speak your **email intent**.
-4. Preview, edit, and export your personalized draft.
-5. Optionally, save drafts to your profile history.
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [How It Works](#how-it-works)
+4. [Agent Flow](#agent-flow)
+5. [Architecture](#architecture)
+6. [Prompt Logic](#prompt-logic)
+7. [Usage](#usage)
+8. [Installation & Setup](#installation--setup)
+9. [Live Agent Tracing](#live-agent-tracing)
+10. [Voice Input Support](#voice-input-support)
+11. [Example Voice Inputs](#example-voice-inputs)
+12. [Deployment](#deployment)
+13. [Requirements](#requirements)
+14. [License](#license)
+15. [Author](#author)
 
 ---
 
-## 5. Agent Flow
+## Introduction
 
-The core of the app is a multi-agent pipeline, where each agent performs a specialized task and passes the result to the next. The flow is as follows:
+**Agentic AI Email Generator** is a multi-agent, AI-powered email assistant built to help professionals draft, personalize, and review emails with speed and accuracy.
+
+Using **LangGraph** for orchestration and **OpenAI LLMs**, the system breaks email creation into specialized agents, producing high-quality, context-aware emails while maintaining transparency through live execution traces.
+
+---
+
+## Features
+
+- 🚀 Rapid email drafting in under 2 minutes
+- 🎯 Automatic intent detection (follow-up, outreach, apology, etc.)
+- 🎨 Multiple tones: formal, casual, assertive, or profile-based
+- 🧠 Memory-based personalization
+- 🎙 Voice input with speech-to-text
+- 🧪 Grammar, tone, and clarity review
+- 🧭 Live per-agent execution tracing
+- ✏ Editable drafts with export support
+- 💾 Save drafts to profile history
+
+---
+
+## How It Works
+
+The system uses a **LangGraph StateGraph** where each agent performs a single, well-defined task.  
+Structured outputs are passed downstream until a final, polished email is produced.
+
+---
+
+## Agent Flow
 
 ```mermaid
 graph TD
-	A[Input Parser] --> B[Intent Detector]
-	B --> C[Tone Stylist]
-	C --> D[Draft Writer]
-	D --> E[Personalization Agent]
-	E --> F[Review Agent]
-	F --> G[Router Agent]
-	G -- Rewrite Needed? --> D
-	G -- Done --> H[Output]
+    A[Input Parser] --> B[Intent Detector]
+    B --> C[Tone Stylist]
+    C --> D[Draft Writer]
+    D --> E[Personalization Agent]
+    E --> F[Review Agent]
+    F --> G[Router Agent]
+    G -- Rewrite Needed --> D
+    G -- Complete --> H[Final Output]
 ```
 
 **Description:**
@@ -154,11 +168,51 @@ The app uses a structured prompt logic to extract and transform user input into 
 
 ---
 
+## Usage
+
+    1.	Launch the app
+    2.	Choose Text or Voice input
+    3.	Select a tone (or use profile default)
+    4.	Generate the email
+    5.	Review agent traces
+    6.	Edit, export, or save the draft
+
 ## Example Voice Intents
 
 Sample voice input files are available in `src/example_voice_inputs/`.
 
 ---
+
+## Live Agent Tracing
+
+**The UI displays real-time traces for each agent, including:**
+• Agent name
+• Execution duration
+• Timestamp
+• Input and output keys
+
+This provides transparency and simplifies debugging.
+
+## Requirements
+
+    •	Python 3.10+
+    •	Streamlit
+    •	LangGraph
+    •	OpenAI API key
+
+## Installation & Setup
+
+- git clone https://github.com/your-repo/agentic-email-generator.git
+- cd agentic-email-generator
+- pip install -r requirements.txt
+
+## Set environment variable:
+
+- export OPENAI_API_KEY="your_api_key"
+
+**Run Locally**
+
+- streamlit run streamlit_app.py
 
 ## Deployment
 
