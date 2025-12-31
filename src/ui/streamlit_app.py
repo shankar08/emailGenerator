@@ -94,29 +94,37 @@ def main():
                 else:
                     extra = f"\n\ntone: {tone_choice}" if tone_choice != "(profile)" else ""
                     full_text = user_text + extra
-                    spinner = st.empty()
-                    spinner.info("Generating draft...")
-                    trace = st.empty()
-                    state = {"messages": [{"content": full_text}], "flow": []}
-                    llm = make_openai_llm()
-                    agents = [
-                        ("Input Parsing", lambda s: InputParserAgent.run(s)),
-                        ("Intent Detection", lambda s: IntentDetectionAgent.run(s, llm)),
-                        ("Tone Styling", lambda s: ToneStylistAgent.run(s)),
-                        ("Draft Writing", lambda s: DraftWriterAgent.run(s, llm)),
-                        ("Personalization", lambda s: PersonalizationAgent.run(s)),
-                        ("Review", lambda s: ReviewAgent.run(s, llm)),
-                        ("Routing", lambda s: RouterAgent.run(s)),
-                    ]
-                    for name, fn in agents:
-                        output = fn(state)
-                        state.update(output)
-                        state["flow"].append({"agent": name, "output": output})
-                        trace.markdown(f"#### {name}")
-                        trace.json(output)
-                    spinner.empty()
-                    st.session_state["last_result"] = state
+
+                    with st.spinner("Generating email draft..."):
+                        result = run_email_workflow(full_text)
+
+                    # Save result for right panel
+                    st.session_state["last_result"] = result
                     st.success("Email draft generated!")
+
+                    # ===========================
+                    # Agent Traces Section
+                    # ===========================
+                    st.subheader("Agent Execution Trace")
+
+                    traces = result.get("traces", [])
+
+                    if not traces:
+                        st.info("No trace data available.")
+                    else:
+                        for trace in traces:
+                            with st.expander(
+                                f"{trace['agent']} • {trace['duration_ms']} ms",
+                                expanded=False
+                            ):
+                                st.markdown(f"**Agent:** {trace['agent']}")
+                                st.markdown(f"**Duration:** {trace['duration_ms']} ms")
+                                st.markdown(f"**Timestamp:** {trace['timestamp']}")
+                                st.markdown("**Input Keys:**")
+                                st.code(", ".join(trace.get("input_keys", [])))
+                                st.markdown("**Output Keys:**")
+                                st.code(", ".join(trace.get("output_keys", [])))
+
 
         with right:
             st.subheader("Draft & Actions")
