@@ -112,8 +112,9 @@ Email-Generator/
 │   │   └── langgraph_flow.py      # LangGraph StateGraph orchestration
 │   ├── memory/
 │   │   ├── __init__.py
-│   │   ├── json_memory.py
+│   │   ├── store.py
 │   │   └── user_profiles.json
+│   │   └── eval_history.json
 │   ├── integrations/
 │   │   └── llm_client.py          # OpenAI LLM
 │   └── runtime.txt                # Python version
@@ -123,7 +124,6 @@ Email-Generator/
 ├── eval/
 │   └── email_eval_set.json        # data set used by LLM to refer for evaluating the emails
 |   └── eval_runner.py             # Main function to evaluated generated email.
-|   └── results.json
 ```
 
 ---
