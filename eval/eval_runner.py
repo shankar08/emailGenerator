@@ -94,7 +94,5 @@ def run_eval():
             "scores": score
         })
 
-    json.dump(results, open("eval/results.json", "w"), indent=2)
-
 if __name__ == "__main__":
     run_eval()

@@ -22,7 +22,7 @@ from agents.review_agent import ReviewAgent
 from agents.router_agent import RouterAgent
 
 from integrations.llm_client import make_openai_llm
-from memory.json_memory import get_profile, upsert_profile
+from memory.store import get_profile, upsert_profile
 
 import time
 from copy import deepcopy
