@@ -95,6 +95,10 @@
       {
         "subject": "Request for Thesis Information",
         "body": "Hi Professor,\n\nI hope this message finds you well. I am writing to request information regarding my thesis. I would greatly appreciate the opportunity to meet with you to discuss this matter in detail. Please let me know your availability for a meeting at your earliest convenience.\n\nThank you for your time and assistance.\n\nSincerely,\nSP"
+      },
+      {
+        "subject": "Request for Thesis Information",
+        "body": "Hi Professor,\n\nI hope this message finds you well. I am writing to request information regarding my thesis. I would greatly appreciate the opportunity to meet with you to discuss this matter in detail. Please let me know your availability at your earliest convenience.\n\nSincerely,\nSP"
       }
     ]
   }
