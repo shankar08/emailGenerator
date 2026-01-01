@@ -1,0 +1,70 @@
+[
+  {
+    "eval_id": "24b21451-02bc-4508-bb52-8005502a5e5c",
+    "timestamp": "2026-01-01T01:49:27.987364",
+    "prompt": "Write an email requesting thesis info to your professor. \n\ntone: formal",
+    "subject": "Request for Thesis Information",
+    "body": "Hi Professor,\n\nI hope this message finds you well. I am writing to request information regarding my thesis. I would greatly appreciate the opportunity to meet with you to discuss this matter in detail. Please let me know your availability at your earliest convenience.\n\nSincerely,\nSP",
+    "scores": {
+      "intent_accuracy": 9,
+      "tone_alignment": 7,
+      "clarity": 8,
+      "professionalism": 7,
+      "completeness": 6,
+      "grammar": 9,
+      "overall_score": 8,
+      "explanation": "The email effectively communicates the intent to request thesis information, scoring high on intent accuracy. The tone is somewhat formal but could be improved by using a more formal greeting and closing, hence the tone alignment and professionalism scores. Clarity is good, as the request is straightforward. Completeness is slightly lacking as it doesn't specify what information is needed or provide context about the thesis. Grammar is nearly perfect, contributing to a high overall score."
+    }
+  },
+  {
+    "eval_id": "2016df77-13e9-4143-b6c9-c557d6638f84",
+    "timestamp": "2026-01-01T01:50:39.246728",
+    "prompt": "Compose a letter to send best wishes for new year to all your junior colleagues. \n\ntone: casual",
+    "subject": "Happy New Year Wishes!",
+    "body": "Hey Team!\n\nI just wanted to take a moment to wish you all a fantastic New Year! I hope 2024 brings you lots of joy, success, and great memories. It’s been awesome working with each of you, and I can’t wait to see what we’ll achieve together this year.\n\nLet’s make it a great one!\n\nCheers,\nSP",
+    "scores": {
+      "intent_accuracy": 10,
+      "tone_alignment": 10,
+      "clarity": 10,
+      "professionalism": 9,
+      "completeness": 9,
+      "grammar": 10,
+      "overall_score": 10,
+      "explanation": "The generated email effectively fulfills the user request by sending best wishes for the New Year to junior colleagues. The tone is casual, as requested, and the message is clear and concise. The email maintains a professional yet friendly tone, appropriate for addressing colleagues. It covers the essential elements of a New Year greeting, though it could include a bit more personalization or specific well-wishes. The grammar is flawless, contributing to the overall clarity and professionalism of the email."
+    }
+  },
+  {
+    "eval_id": "15725cd5-ac73-42e9-bbf5-ce5e175251b6",
+    "timestamp": "2026-01-01T01:54:59.744620",
+    "prompt": "Write an email to request of sick leave. \n\ntone: assertive",
+    "subject": "Request for Sick Leave",
+    "body": "Dear [Manager's Name],\n\nI am writing to formally request sick leave starting from [start date] to [end date]. I am unable to perform my duties due to health reasons and will ensure that all my responsibilities are managed in my absence.\n\nPlease let me know if you require any further information or documentation.\n\nThank you,\nSP\n\nBest regards,\nSP",
+    "scores": {
+      "intent_accuracy": 10,
+      "tone_alignment": 8,
+      "clarity": 9,
+      "professionalism": 9,
+      "completeness": 8,
+      "grammar": 9,
+      "overall_score": 9,
+      "explanation": "The email effectively communicates the intent to request sick leave, which aligns with the user's request. The tone is mostly assertive, but could be slightly more direct to fully match the requested assertiveness. The email is clear and professional, with a straightforward structure. It is mostly complete, but could include specific dates and a more explicit assurance of responsibility management. The grammar is correct, contributing to the overall professionalism of the email."
+    }
+  },
+  {
+    "eval_id": "e833de4c-aada-4fc0-974c-d68086be8f8d",
+    "timestamp": "2026-01-01T03:18:55.745948",
+    "prompt": "Write an email to apply for openings that their company has. \n\ntone: formal",
+    "subject": "Application for Open Positions at True Startup",
+    "body": "Hi,\n\nI hope this message finds you well. I am writing to express my interest in any current or upcoming openings at True Startup. I believe my skills and experiences align well with the values and goals of your company.\n\nI would appreciate the opportunity to discuss how I can contribute to your team. Please let me know if there are any available positions or if you require any further information from my side.\n\nThank you for considering my application. I look forward to your response.\n\nSincerely,\nSP",
+    "scores": {
+      "intent_accuracy": 9,
+      "tone_alignment": 7,
+      "clarity": 8,
+      "professionalism": 7,
+      "completeness": 6,
+      "grammar": 9,
+      "overall_score": 8,
+      "explanation": "The email effectively communicates the intent to apply for job openings, which aligns well with the user's request. However, the tone is slightly informal due to the use of 'Hi' instead of a more formal greeting like 'Dear [Name]'. The email is clear and grammatically correct, but it lacks specific details about the applicant's qualifications or the positions they are interested in, which affects completeness and professionalism. Overall, the email is well-written but could be improved by adding more specific information and using a more formal greeting."
+    }
+  }
+]
