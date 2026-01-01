@@ -66,5 +66,22 @@
       "overall_score": 8,
       "explanation": "The email effectively communicates the intent to apply for job openings, which aligns well with the user's request. However, the tone is slightly informal due to the use of 'Hi' instead of a more formal greeting like 'Dear [Name]'. The email is clear and grammatically correct, but it lacks specific details about the applicant's qualifications or the positions they are interested in, which affects completeness and professionalism. Overall, the email is well-written but could be improved by adding more specific information and using a more formal greeting."
     }
+  },
+  {
+    "eval_id": "3e58c56f-a516-41d4-93b2-f70e9a757220",
+    "timestamp": "2026-01-01T03:21:16.662687",
+    "prompt": "Write an email to document all the information from the meeting. Request for detailed meeting minute. \n\ntone: formal",
+    "subject": "Request for Detailed Meeting Minutes",
+    "body": "Hi Team,\n\nI hope this message finds you well. I am writing to document the key points discussed during our recent meeting. To ensure accuracy and clarity, I kindly request that detailed meeting minutes be prepared and shared with all participants.\n\nThank you for your attention to this matter. I look forward to receiving the minutes at your earliest convenience.\n\nSincerely,\nSP",
+    "scores": {
+      "intent_accuracy": 9,
+      "tone_alignment": 8,
+      "clarity": 9,
+      "professionalism": 8,
+      "completeness": 7,
+      "grammar": 10,
+      "overall_score": 8,
+      "explanation": "The email effectively requests detailed meeting minutes, aligning well with the user's intent. The tone is mostly formal, though the opening 'Hi Team' could be more formal, such as 'Dear Team'. The email is clear and grammatically correct, maintaining professionalism. However, it lacks specific details about the meeting, such as the date or topics discussed, which affects completeness. Overall, the email is well-constructed but could be improved with more specific information and a slightly more formal tone."
+    }
   }
 ]
