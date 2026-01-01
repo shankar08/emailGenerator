@@ -45,13 +45,14 @@ Using **LangGraph** for orchestration and **OpenAI LLMs**, the system breaks ema
 - 🧭 Live per-agent execution tracing
 - ✏ Editable drafts with export support
 - 💾 Save drafts to profile history
+- Evaluataion of generated emails using LLM as Judge
 
 ---
 
 ## How It Works
 
 The system uses a **LangGraph StateGraph** where each agent performs a single, well-defined task.  
-Structured outputs are passed downstream until a final, polished email is produced.
+Structured outputs are passed downstream until a final, polished email is produced. Then the produced email is finally evaluated using LLM as Judge.
 
 ---
 
@@ -67,6 +68,7 @@ graph TD
     F --> G[Router Agent]
     G -- Rewrite Needed --> D
     G -- Complete --> H[Final Output]
+    H --> [Evaluation]
 ```
 
 **Description:**
@@ -78,6 +80,7 @@ graph TD
 - **Personalization Agent:** Adds user-specific details.
 - **Review Agent:** Checks for grammar, tone, and clarity.
 - **Router Agent:** Decides if another draft/rewrite is needed or finishes the flow.
+- **Evaluation:** GPT 4.0 is again used to evaluate the final output with the requested content to measure the performance of the LLM.
 
 ---
 
@@ -117,6 +120,11 @@ Email-Generator/
 │   └── runtime.txt                # Python version
 ├── data/
 │   └── tone_samples.json
+│   └── runtime.txt                # Python version
+├── eval/
+│   └── email_eval_set.json        # data set used by LLM to refer for evaluating the emails
+|   └── eval_runner.py             # Main function to evaluated generated email.
+|   └── results.json
 ```
 
 ---
