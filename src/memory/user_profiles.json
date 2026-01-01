@@ -127,6 +127,10 @@
       {
         "subject": "Resignation Notice",
         "body": "Hi [Manager's Name],\n\nI hope this message finds you well. I am writing to formally resign from my position at True Startup, effective [last working day, typically two weeks from the date of the email].\n\nI would like to express my gratitude for the opportunities I have had during my time with the company. I have greatly appreciated the support and guidance from you and my colleagues.\n\nPlease let me know how I can assist during the transition period. I wish True Startup continued success in the future.\n\nSincerely,\nSP"
+      },
+      {
+        "subject": "Welcome to the Team!",
+        "body": "Hey there!\n\nI just wanted to take a moment to welcome you to True Startup! We’re super excited to have you on board and can’t wait to see the amazing things you’ll bring to the team.\n\nIf you have any questions or just want to chat, feel free to reach out. We’re all here to help you settle in!\n\nLooking forward to working together!\n\nCheers,\nSP"
       }
     ]
   }
