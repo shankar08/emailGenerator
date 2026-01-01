@@ -100,5 +100,22 @@
       "overall_score": 5,
       "explanation": "The email does not fully meet the user's request. The intent is somewhat accurate as it requests assistance, but it lacks specific details about the matter. The tone is not formal enough; it uses 'Hi' instead of a more formal greeting like 'Dear [Name]'. Clarity is moderate, as the email is understandable but vague. Professionalism is average due to the informal greeting and lack of detail. Completeness is low because the email does not specify the nature of the assistance needed. Grammar is mostly correct, but the overall score reflects the need for a more formal and detailed approach."
     }
+  },
+  {
+    "eval_id": "1e4dfb1a-3d43-400a-a0e9-b7b9850bd22f",
+    "timestamp": "2026-01-01T23:50:56.281598",
+    "prompt": "Write a warm email to welcome new hire. \n\ntone: casual",
+    "subject": "Welcome to the Team!",
+    "body": "Hey there!\n\nI just wanted to take a moment to welcome you to True Startup! We’re super excited to have you on board and can’t wait to see the amazing things you’ll bring to the team.\n\nIf you have any questions or just want to chat, feel free to reach out. We’re all here to help you settle in!\n\nLooking forward to working together!\n\nCheers,\nSP",
+    "scores": {
+      "intent_accuracy": 10,
+      "tone_alignment": 10,
+      "clarity": 10,
+      "professionalism": 9,
+      "completeness": 9,
+      "grammar": 10,
+      "overall_score": 10,
+      "explanation": "The email effectively welcomes the new hire with a warm and casual tone, as requested. It clearly conveys excitement about the new hire joining the team and offers support, which aligns with the intent. The language is clear and grammatically correct. While the email is professional, it maintains a casual tone, which is appropriate for the context. The email could be slightly more complete by including a brief introduction of the sender or a mention of the new hire's role, but it still fulfills the primary purpose of welcoming the new hire."
+    }
   }
 ]
