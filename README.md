@@ -68,7 +68,6 @@ graph TD
     F --> G[Router Agent]
     G -- Rewrite Needed --> D
     G -- Complete --> H[Final Output]
-    H --> [Evaluation]
 ```
 
 **Description:**
