@@ -1,7 +1,11 @@
 # -*- coding: utf-8 -*-
 """
 Streamlit app for AI Powered Email Generator
-Includes LLM-based evaluation with GitHub-synced persistence.
+Includes:
+- Multi-agent email generation
+- Per-agent execution timing (table + pie chart)
+- LLM-as-a-Judge evaluation
+- GitHub-synced eval & profile persistence
 """
 
 import json
@@ -11,6 +15,7 @@ from datetime import datetime
 
 import streamlit as st
 import openai
+import matplotlib.pyplot as plt
 from langsmith import traceable
 
 from workflow.langgraph_flow import run_email_workflow
@@ -24,9 +29,9 @@ from memory.store import (
     get_eval_history,
 )
 
-# --------------------------------------------------
+# ==================================================
 # Helpers
-# --------------------------------------------------
+# ==================================================
 
 def safe_json_loads(text: str) -> dict:
     """Safely parse JSON, stripping markdown fences."""
@@ -39,46 +44,44 @@ def safe_json_loads(text: str) -> dict:
     return json.loads(cleaned)
 
 
-# --------------------------------------------------
+# ==================================================
 # LLM Judge
-# --------------------------------------------------
+# ==================================================
 
 @traceable(run_type="evaluation")
 def judge_email(user_input: str, tone: str, subject: str, body: str) -> dict:
     llm = make_openai_llm(model="gpt-4o", temperature=0)
 
     prompt = f"""
-                You are an expert email reviewer.
+You are an expert email reviewer.
 
-                Evaluate the GENERATED EMAIL against the USER REQUEST.
+Evaluate the GENERATED EMAIL against the USER REQUEST.
 
-                IMPORTANT:
-                - Scores MUST be integers from 1 to 10 ONLY.
-                - Do NOT use any other scale.
-                - Do NOT include decimals.
-                - Do NOT exceed 10.
+IMPORTANT:
+- Scores MUST be integers from 1 to 10 ONLY
+- Do NOT use decimals or other scales
 
-                USER REQUEST:
-                {user_input}
+USER REQUEST:
+{user_input}
 
-                REQUESTED TONE:
-                {tone}
+REQUESTED TONE:
+{tone}
 
-                GENERATED EMAIL:
-                Subject: {subject}
+GENERATED EMAIL:
+Subject: {subject}
 
-                {body}
+{body}
 
-                Return ONLY valid JSON with:
-                - intent_accuracy
-                - tone_alignment
-                - clarity
-                - professionalism
-                - completeness
-                - grammar
-                - overall_score
-                - explanation
-                """
+Return ONLY valid JSON with:
+- intent_accuracy
+- tone_alignment
+- clarity
+- professionalism
+- completeness
+- grammar
+- overall_score
+- explanation
+"""
 
     response = llm.invoke(prompt)
 
@@ -100,9 +103,9 @@ def judge_email(user_input: str, tone: str, subject: str, body: str) -> dict:
     return scores
 
 
-# --------------------------------------------------
+# ==================================================
 # Streamlit App
-# --------------------------------------------------
+# ==================================================
 
 def main():
     st.set_page_config(page_title="AI Powered Email Generator", layout="wide")
@@ -115,22 +118,13 @@ def main():
     # ==================================================
     with tabs[0]:
         st.header("User Profile")
-
         profile = get_profile("default")
 
         with st.form("profile_form"):
-            name = st.text_input(
-                "Sender name",
-                value=profile.get("name", "SP"),
-            )
-            company = st.text_input(
-                "Company",
-                value=profile.get("company", "True Startup"),
-            )
+            name = st.text_input("Sender name", profile.get("name", "SP"))
+            company = st.text_input("Company", profile.get("company", "True Startup"))
 
-            submitted = st.form_submit_button("Save profile")
-
-            if submitted:
+            if st.form_submit_button("Save profile"):
                 upsert_profile(
                     "default",
                     {
@@ -150,7 +144,7 @@ def main():
         left, right = st.columns([2, 3])
 
         # ------------------------------
-        # Input
+        # Input Section
         # ------------------------------
         with left:
             st.subheader("Compose Email")
@@ -159,24 +153,13 @@ def main():
             user_text = ""
 
             if mode == "Text":
-                user_text = st.text_area(
-                    "Describe your email intent",
-                    height=200,
-                )
+                user_text = st.text_area("Describe your email intent", height=200)
             else:
-                st.info("Upload an audio file (WAV, MP3, M4A, MP4).")
-
-                if "voice_text" not in st.session_state:
-                    st.session_state.voice_text = ""
-
-                audio_file = st.file_uploader(
-                    "Upload audio",
-                    type=["wav", "mp3", "m4a", "mp4"],
-                )
+                st.info("Upload an audio file (WAV, MP3, M4A, MP4)")
+                audio_file = st.file_uploader("Upload audio", type=["wav", "mp3", "m4a", "mp4"])
 
                 if audio_file:
-                    suffix = "." + audio_file.name.split(".")[-1]
-                    with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as tmp:
+                    with tempfile.NamedTemporaryFile(delete=False) as tmp:
                         tmp.write(audio_file.read())
                         audio_path = tmp.name
 
@@ -188,11 +171,9 @@ def main():
                             language="en",
                         )
 
-                    st.session_state.voice_text = getattr(transcript, "text", "")
+                    user_text = transcript.text
                     st.write("Transcription:")
-                    st.write(st.session_state.voice_text)
-
-                user_text = st.session_state.voice_text
+                    st.write(user_text)
 
             tone_choice = st.selectbox(
                 "Tone (optional)",
@@ -204,18 +185,57 @@ def main():
                     st.warning("Please provide email intent.")
                     st.stop()
 
-                extra = f"\n\ntone: {tone_choice}" if tone_choice != "(profile)" else ""
-                prompt_text = user_text + extra
+                prompt_text = (
+                    user_text
+                    if tone_choice == "(profile)"
+                    else user_text + f"\n\ntone: {tone_choice}"
+                )
 
+                # ------------------------------
+                # Run workflow
+                # ------------------------------
                 with st.spinner("Generating email draft..."):
                     result = run_email_workflow(prompt_text)
 
                 st.session_state.last_result = result
                 st.success("Email draft generated.")
 
+                # ------------------------------
+                # Agent Execution Timing
+                # ------------------------------
+                # ===========================
+                # Agent Execution Time (seconds)
+                # ===========================
+                st.subheader("Agent Execution Trace")
+
+                traces = result.get("traces", [])
+
+                if not traces:
+                    st.info("No trace data available.")
+                else:
+                    for trace in traces:
+                        duration_sec = round(trace["duration_ms"] / 1000, 2)
+
+                        with st.expander(
+                            f"{trace['agent']} • {duration_sec} s",
+                            expanded=False
+                        ):
+                            st.markdown(f"**Agent:** {trace['agent']}")
+                            st.markdown(f"**Duration:** {duration_sec} seconds")
+                            st.markdown(f"**Timestamp:** {trace['timestamp']}")
+
+                            st.markdown("**Input Keys:**")
+                            st.code(", ".join(trace.get("input_keys", [])))
+
+                            st.markdown("**Output Keys:**")
+                            st.code(", ".join(trace.get("output_keys", [])))
+
+                # ------------------------------
+                # Evaluation
+                # ------------------------------
                 draft = result.get("personalized_draft") or result.get("draft") or {}
 
-                with st.spinner("Evaluating draft..."):
+                with st.spinner("Evaluating email..."):
                     scores = judge_email(
                         user_input=prompt_text,
                         tone=tone_choice,
@@ -223,10 +243,7 @@ def main():
                         body=draft.get("body", ""),
                     )
 
-                st.session_state.last_eval = {
-                    "timestamp": datetime.utcnow().isoformat(),
-                    "scores": scores,
-                }
+                st.session_state.last_eval = scores
 
                 if "error" not in scores:
                     save_eval(
@@ -236,7 +253,7 @@ def main():
                     )
                     st.success("Email evaluated and saved.")
                 else:
-                    st.error("Evaluation failed. See Eval History for details.")
+                    st.error("Evaluation failed.")
 
         # ------------------------------
         # Draft Preview
@@ -260,20 +277,10 @@ def main():
                 "Export as .txt",
                 data=f"Subject: {subject_edit}\n\n{body_edit}",
                 file_name="email_draft.txt",
-                mime="text/plain",
-                disabled=not bool(subject_edit or body_edit),
             )
 
-            if st.button("Save to Profile History", disabled=not last):
-                prof = get_profile("default")
-                prof.setdefault("sent_examples", []).append(
-                    {"subject": subject_edit, "body": body_edit}
-                )
-                upsert_profile("default", prof)
-                st.success("Draft saved to profile history.")
-
     # ==================================================
-    # Evaluation History Tab
+    # Eval History Tab
     # ==================================================
     with tabs[2]:
         st.header("Evaluation History")
@@ -315,9 +322,6 @@ def main():
 
                     st.markdown("**Judge Explanation**")
                     st.write(scores.get("explanation", ""))
-
-                    with st.expander("Raw JSON"):
-                        st.json(scores)
 
 
 if __name__ == "__main__":
