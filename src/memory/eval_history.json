@@ -134,5 +134,22 @@
       "overall_score": 7,
       "explanation": "The email generally fulfills the intent of welcoming new hires to a town hall meeting, but it lacks specific details such as the date, time, and location, which affects completeness. The tone is somewhat formal but could be more polished to fully align with the requested formal tone. The language is clear and grammatically correct, but the use of 'Hi Team' and 'I hope this message finds you well' is slightly informal for a formal setting. Overall, the email is professional but could be improved with more specific details and a more consistently formal tone."
     }
+  },
+  {
+    "eval_id": "28a5ac9d-321d-412e-90ec-c48a67f81894",
+    "timestamp": "2026-01-03T19:23:15.074553",
+    "prompt": "Write an email to say good bye.\n\ntone: assertive",
+    "subject": "Farewell and Best Wishes",
+    "body": "Dear Team,\n\nI am writing to inform you that I will be leaving True Startup. My last day will be [insert last working day]. I appreciate the time we have spent together and the experiences we have shared.\n\nPlease ensure that all outstanding tasks are completed by my departure date. If you have any questions or need assistance during this transition, feel free to reach out.\n\nThank you for everything.\n\nBest regards,\nSP",
+    "scores": {
+      "intent_accuracy": 9,
+      "tone_alignment": 8,
+      "clarity": 9,
+      "professionalism": 9,
+      "completeness": 8,
+      "grammar": 10,
+      "overall_score": 9,
+      "explanation": "The email effectively communicates the intent to say goodbye, with a clear and professional tone. The assertive tone is present, particularly in the directive to complete outstanding tasks, but could be slightly stronger to fully align with the request. The email is grammatically correct and mostly complete, though it could include more specific details or personal touches to enhance completeness. Overall, it is a well-constructed farewell email."
+    }
   }
 ]
