@@ -100,5 +100,22 @@
       "overall_score": 9,
       "explanation": "The email effectively communicates the intent to resign, maintaining a formal tone throughout. It is clear and professional, expressing gratitude and offering assistance during the transition. However, it lacks specific details such as the recipient's name and the exact last working day, which slightly affects completeness. Grammar is flawless, contributing to the overall high score."
     }
+  },
+  {
+    "eval_id": "692fcb95-0dab-4fa3-aad9-2a1f3cc3e77d",
+    "timestamp": "2026-01-03T19:17:25.165977",
+    "prompt": "Write an email to Resign.\n\ntone: casual",
+    "subject": "My Resignation",
+    "body": "Hey there!\n\nI hope you’re doing well! I wanted to let you know that I’ve decided to resign from my position at True Startup. It wasn’t an easy decision, but I feel it’s the right time for me to move on to new adventures.\n\nI’m really grateful for all the experiences and friendships I’ve made here. I’ll do my best to ensure a smooth transition over the next few weeks.\n\nThanks for everything!\n\nCheers,\nSP",
+    "scores": {
+      "intent_accuracy": 9,
+      "tone_alignment": 10,
+      "clarity": 9,
+      "professionalism": 7,
+      "completeness": 8,
+      "grammar": 10,
+      "overall_score": 9,
+      "explanation": "The email effectively communicates the intent to resign, aligning well with the requested casual tone. It is clear and grammatically correct. However, it could be slightly more professional by including a specific last working day and offering more details on the transition process. Overall, it fulfills the user's request with minor areas for improvement."
+    }
   }
 ]
