@@ -127,6 +127,10 @@
       {
         "subject": "Welcome to Our New Hires - Town Hall Meeting Invitation",
         "body": "Hi Team,\n\nI hope this message finds you well. I am pleased to announce that we will be holding a Town Hall meeting to welcome all our new hires. This meeting will provide an excellent opportunity for everyone to get acquainted and to learn more about our company culture and values.\n\nPlease join us on [insert date and time] at [insert location/virtual link]. Your presence will be greatly appreciated as we celebrate the newest members of our team.\n\nThank you, and I look forward to seeing you all there.\n\nSincerely,\nSP"
+      },
+      {
+        "subject": "Farewell and Best Wishes",
+        "body": "Dear Team,\n\nI am writing to inform you that I will be leaving True Startup. My last day will be [insert last working day]. I appreciate the time we have spent together and the experiences we have shared.\n\nPlease ensure that all outstanding tasks are completed by my departure date. If you have any questions or need assistance during this transition, feel free to reach out.\n\nThank you for everything.\n\nBest regards,\nSP"
       }
     ]
   }
