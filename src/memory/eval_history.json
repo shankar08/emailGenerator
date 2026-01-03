@@ -117,5 +117,22 @@
       "overall_score": 10,
       "explanation": "The email effectively welcomes the new hire with a warm and casual tone, as requested. It clearly conveys excitement about the new hire joining the team and offers support, which aligns with the intent. The language is clear and grammatically correct. While the email is professional, it maintains a casual tone, which is appropriate for the context. The email could be slightly more complete by including a brief introduction of the sender or a mention of the new hire's role, but it still fulfills the primary purpose of welcoming the new hire."
     }
+  },
+  {
+    "eval_id": "b0aad023-907f-4f1e-819f-f743d5c864f2",
+    "timestamp": "2026-01-03T18:59:48.785279",
+    "prompt": "Write an email to share best wishes for new year 2026. \n\ntone: casual",
+    "subject": "Happy New Year 2026!",
+    "body": "Hey there!\n\nHope you’re having a fantastic start to the new year! I just wanted to take a moment to wish you all the best for 2026. May this year bring you lots of joy, success, and unforgettable moments.\n\nCheers to new adventures ahead!\n\nThanks,\nSP",
+    "scores": {
+      "intent_accuracy": 10,
+      "tone_alignment": 10,
+      "clarity": 10,
+      "professionalism": 8,
+      "completeness": 9,
+      "grammar": 10,
+      "overall_score": 9,
+      "explanation": "The generated email effectively fulfills the user's request by conveying best wishes for the new year 2026 in a casual tone. The intent is clear and accurately aligned with the request. The language is clear and grammatically correct. The email is slightly informal, which aligns with the casual tone but slightly affects professionalism. The email is mostly complete, though it could include a bit more personalization or detail to enhance completeness. Overall, it is a well-crafted email for the intended purpose."
+    }
   }
 ]
