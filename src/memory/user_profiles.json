@@ -131,6 +131,10 @@
       {
         "subject": "Farewell and Best Wishes",
         "body": "Dear Team,\n\nI am writing to inform you that I will be leaving True Startup. My last day will be [insert last working day]. I appreciate the time we have spent together and the experiences we have shared.\n\nPlease ensure that all outstanding tasks are completed by my departure date. If you have any questions or need assistance during this transition, feel free to reach out.\n\nThank you for everything.\n\nBest regards,\nSP"
+      },
+      {
+        "subject": "Resignation Notice",
+        "body": "Hi [Manager's Name],\n\nI hope this message finds you well. I am writing to formally resign from my position at True Startup, effective [Last Working Day, typically two weeks from the date of the email].\n\nI would like to express my gratitude for the opportunities I have had during my time here. I have greatly appreciated the support and guidance from you and the team.\n\nPlease let me know how I can assist during the transition period. I wish the company continued success in the future.\n\nSincerely,\nSP"
       }
     ]
   }
