@@ -151,5 +151,22 @@
       "overall_score": 9,
       "explanation": "The email effectively communicates the intent to say goodbye, with a clear and professional tone. The assertive tone is present, particularly in the directive to complete outstanding tasks, but could be slightly stronger to fully align with the request. The email is grammatically correct and mostly complete, though it could include more specific details or personal touches to enhance completeness. Overall, it is a well-constructed farewell email."
     }
+  },
+  {
+    "eval_id": "7e07afb9-3cbd-4286-9ff1-04155e46123f",
+    "timestamp": "2026-01-03T19:26:25.428980",
+    "prompt": "Resign email from my current role.\n\ntone: formal",
+    "subject": "Resignation Notice",
+    "body": "Hi [Manager's Name],\n\nI hope this message finds you well. I am writing to formally resign from my position at True Startup, effective [Last Working Day, typically two weeks from the date of the email].\n\nI would like to express my gratitude for the opportunities I have had during my time here. I have greatly appreciated the support and guidance from you and the team.\n\nPlease let me know how I can assist during the transition period. I wish the company continued success in the future.\n\nSincerely,\nSP",
+    "scores": {
+      "intent_accuracy": 9,
+      "tone_alignment": 8,
+      "clarity": 9,
+      "professionalism": 8,
+      "completeness": 7,
+      "grammar": 10,
+      "overall_score": 8,
+      "explanation": "The email effectively communicates the intent to resign, maintaining a formal tone throughout. It is clear and grammatically correct, demonstrating professionalism. However, it could be improved by including a specific last working day and addressing the manager by name to enhance completeness and personalization. The tone, while formal, could be slightly more polished to fully align with the requested tone."
+    }
   }
 ]
