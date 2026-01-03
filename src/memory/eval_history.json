@@ -151,5 +151,22 @@
       "overall_score": 9,
       "explanation": "The email effectively communicates a farewell message, aligning well with the formal tone requested. It is clear and professional, with impeccable grammar. However, the use of 'Hi' as a greeting slightly detracts from the formality, and the email could be more complete by including a more formal closing or additional details about the transition. Overall, it is a well-crafted email that meets the user's request."
     }
+  },
+  {
+    "eval_id": "fa6bc8cc-9e8e-4e47-8563-d3722f7462ab",
+    "timestamp": "2026-01-03T19:31:53.693679",
+    "prompt": "Send an email to my professor for extending deadline for my final project submission time. \n\ntone: formal",
+    "subject": "Request for Extension on Final Project Submission",
+    "body": "Hi Professor,\n\nI hope this message finds you well. I am writing to formally request an extension on the deadline for my final project submission. Due to unforeseen circumstances, I am unable to complete the project by the original deadline. I would greatly appreciate any additional time you could provide.\n\nThank you for considering my request. I look forward to your understanding.\n\nSincerely,\nSP",
+    "scores": {
+      "intent_accuracy": 9,
+      "tone_alignment": 8,
+      "clarity": 9,
+      "professionalism": 8,
+      "completeness": 7,
+      "grammar": 10,
+      "overall_score": 8,
+      "explanation": "The email effectively communicates the intent to request an extension, maintaining a formal tone throughout. The clarity is high, as the request is straightforward and easy to understand. Professionalism is slightly lacking due to the informal greeting 'Hi Professor,' which could be improved to 'Dear Professor [Last Name],' to better align with the formal tone. Completeness is slightly lacking as it does not specify the new deadline being requested or provide details about the unforeseen circumstances. Grammar is flawless, contributing to the overall effectiveness of the email."
+    }
   }
 ]
