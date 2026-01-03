@@ -85,88 +85,71 @@
     }
   },
   {
-    "eval_id": "a475fb96-9bc4-465e-9ea4-cb181ca8795f",
-    "timestamp": "2026-01-03T19:03:27.011367",
-    "prompt": "write an email to Resign for my current role. \n\ntone: formal",
-    "subject": "Resignation from My Current Role",
-    "body": "Hi [Recipient's Name],\n\nI hope this message finds you well. I am writing to formally announce my resignation from my current role at True Startup, effective [Last Working Day, typically two weeks from the date of this email].\n\nI would like to express my gratitude for the opportunities I have had during my time here. I have greatly appreciated the support and guidance from you and the team, which has contributed to my professional growth.\n\nPlease let me know how I can assist during the transition period. I am committed to ensuring a smooth handover of my responsibilities.\n\nThank you once again for everything. I look forward to staying in touch.\n\nSincerely,\nSP",
+    "eval_id": "fcd4aa21-8686-4584-8768-e3f9fcd7882e",
+    "timestamp": "2026-01-01T03:29:25.728403",
+    "prompt": "teat me\n\ntone: formal",
+    "subject": "Request for Assistance",
+    "body": "Hi,\n\nI hope this message finds you well. I am reaching out to request your assistance with a matter that requires your expertise. Your insights would be greatly appreciated.\n\nThank you for considering my request. I look forward to your response.\n\nSincerely,\nSP",
     "scores": {
-      "intent_accuracy": 9,
+      "intent_accuracy": 5,
+      "tone_alignment": 4,
+      "clarity": 6,
+      "professionalism": 5,
+      "completeness": 4,
+      "grammar": 8,
+      "overall_score": 5,
+      "explanation": "The email does not fully meet the user's request. The intent is somewhat accurate as it requests assistance, but it lacks specific details about the matter. The tone is not formal enough; it uses 'Hi' instead of a more formal greeting like 'Dear [Name]'. Clarity is moderate, as the email is understandable but vague. Professionalism is average due to the informal greeting and lack of detail. Completeness is low because the email does not specify the nature of the assistance needed. Grammar is mostly correct, but the overall score reflects the need for a more formal and detailed approach."
+    }
+  },
+  {
+    "eval_id": "1e4dfb1a-3d43-400a-a0e9-b7b9850bd22f",
+    "timestamp": "2026-01-01T23:50:56.281598",
+    "prompt": "Write a warm email to welcome new hire. \n\ntone: casual",
+    "subject": "Welcome to the Team!",
+    "body": "Hey there!\n\nI just wanted to take a moment to welcome you to True Startup! We’re super excited to have you on board and can’t wait to see the amazing things you’ll bring to the team.\n\nIf you have any questions or just want to chat, feel free to reach out. We’re all here to help you settle in!\n\nLooking forward to working together!\n\nCheers,\nSP",
+    "scores": {
+      "intent_accuracy": 10,
+      "tone_alignment": 10,
+      "clarity": 10,
+      "professionalism": 9,
+      "completeness": 9,
+      "grammar": 10,
+      "overall_score": 10,
+      "explanation": "The email effectively welcomes the new hire with a warm and casual tone, as requested. It clearly conveys excitement about the new hire joining the team and offers support, which aligns with the intent. The language is clear and grammatically correct. While the email is professional, it maintains a casual tone, which is appropriate for the context. The email could be slightly more complete by including a brief introduction of the sender or a mention of the new hire's role, but it still fulfills the primary purpose of welcoming the new hire."
+    }
+  },
+  {
+    "eval_id": "b0aad023-907f-4f1e-819f-f743d5c864f2",
+    "timestamp": "2026-01-03T18:59:48.785279",
+    "prompt": "Write an email to share best wishes for new year 2026. \n\ntone: casual",
+    "subject": "Happy New Year 2026!",
+    "body": "Hey there!\n\nHope you’re having a fantastic start to the new year! I just wanted to take a moment to wish you all the best for 2026. May this year bring you lots of joy, success, and unforgettable moments.\n\nCheers to new adventures ahead!\n\nThanks,\nSP",
+    "scores": {
+      "intent_accuracy": 10,
+      "tone_alignment": 10,
+      "clarity": 10,
+      "professionalism": 8,
+      "completeness": 9,
+      "grammar": 10,
+      "overall_score": 9,
+      "explanation": "The generated email effectively fulfills the user's request by conveying best wishes for the new year 2026 in a casual tone. The intent is clear and accurately aligned with the request. The language is clear and grammatically correct. The email is slightly informal, which aligns with the casual tone but slightly affects professionalism. The email is mostly complete, though it could include a bit more personalization or detail to enhance completeness. Overall, it is a well-crafted email for the intended purpose."
+    }
+  },
+  {
+    "eval_id": "d8d48556-ab37-4647-859d-b2def520c203",
+    "timestamp": "2026-01-03T19:27:44.895749",
+    "prompt": "Say good bye.\n\ntone: formal",
+    "subject": "Farewell",
+    "body": "Hi,\n\nI hope this message finds you well. I am writing to formally bid farewell as I transition to new opportunities. It has been a pleasure working with you, and I appreciate the experiences we have shared.\n\nThank you for your support and collaboration during my time here. I wish you all the best in your future endeavors.\n\nSincerely,\nSP",
+    "scores": {
+      "intent_accuracy": 8,
       "tone_alignment": 9,
       "clarity": 9,
       "professionalism": 9,
       "completeness": 8,
       "grammar": 10,
       "overall_score": 9,
-      "explanation": "The email effectively communicates the intent to resign, maintaining a formal tone throughout. It is clear and professional, expressing gratitude and offering assistance during the transition. However, it lacks specific details such as the recipient's name and the exact last working day, which slightly affects completeness. Grammar is flawless, contributing to the overall high score."
-    }
-  },
-  {
-    "eval_id": "692fcb95-0dab-4fa3-aad9-2a1f3cc3e77d",
-    "timestamp": "2026-01-03T19:17:25.165977",
-    "prompt": "Write an email to Resign.\n\ntone: casual",
-    "subject": "My Resignation",
-    "body": "Hey there!\n\nI hope you’re doing well! I wanted to let you know that I’ve decided to resign from my position at True Startup. It wasn’t an easy decision, but I feel it’s the right time for me to move on to new adventures.\n\nI’m really grateful for all the experiences and friendships I’ve made here. I’ll do my best to ensure a smooth transition over the next few weeks.\n\nThanks for everything!\n\nCheers,\nSP",
-    "scores": {
-      "intent_accuracy": 9,
-      "tone_alignment": 10,
-      "clarity": 9,
-      "professionalism": 7,
-      "completeness": 8,
-      "grammar": 10,
-      "overall_score": 9,
-      "explanation": "The email effectively communicates the intent to resign, aligning well with the requested casual tone. It is clear and grammatically correct. However, it could be slightly more professional by including a specific last working day and offering more details on the transition process. Overall, it fulfills the user's request with minor areas for improvement."
-    }
-  },
-  {
-    "eval_id": "b325e2c9-e056-4555-a9af-a7459cc5e5bb",
-    "timestamp": "2026-01-03T19:21:26.892064",
-    "prompt": "Compose an email to welcome all the new hires in town hall meeting.\n\ntone: formal",
-    "subject": "Welcome to Our New Hires - Town Hall Meeting Invitation",
-    "body": "Hi Team,\n\nI hope this message finds you well. I am pleased to announce that we will be holding a Town Hall meeting to welcome all our new hires. This meeting will provide an excellent opportunity for everyone to get acquainted and to learn more about our company culture and values.\n\nPlease join us on [insert date and time] at [insert location/virtual link]. Your presence will be greatly appreciated as we celebrate the newest members of our team.\n\nThank you, and I look forward to seeing you all there.\n\nSincerely,\nSP",
-    "scores": {
-      "intent_accuracy": 8,
-      "tone_alignment": 7,
-      "clarity": 8,
-      "professionalism": 7,
-      "completeness": 6,
-      "grammar": 9,
-      "overall_score": 7,
-      "explanation": "The email generally fulfills the intent of welcoming new hires to a town hall meeting, but it lacks specific details such as the date, time, and location, which affects completeness. The tone is somewhat formal but could be more polished to fully align with the requested formal tone. The language is clear and grammatically correct, but the use of 'Hi Team' and 'I hope this message finds you well' is slightly informal for a formal setting. Overall, the email is professional but could be improved with more specific details and a more consistently formal tone."
-    }
-  },
-  {
-    "eval_id": "28a5ac9d-321d-412e-90ec-c48a67f81894",
-    "timestamp": "2026-01-03T19:23:15.074553",
-    "prompt": "Write an email to say good bye.\n\ntone: assertive",
-    "subject": "Farewell and Best Wishes",
-    "body": "Dear Team,\n\nI am writing to inform you that I will be leaving True Startup. My last day will be [insert last working day]. I appreciate the time we have spent together and the experiences we have shared.\n\nPlease ensure that all outstanding tasks are completed by my departure date. If you have any questions or need assistance during this transition, feel free to reach out.\n\nThank you for everything.\n\nBest regards,\nSP",
-    "scores": {
-      "intent_accuracy": 9,
-      "tone_alignment": 8,
-      "clarity": 9,
-      "professionalism": 9,
-      "completeness": 8,
-      "grammar": 10,
-      "overall_score": 9,
-      "explanation": "The email effectively communicates the intent to say goodbye, with a clear and professional tone. The assertive tone is present, particularly in the directive to complete outstanding tasks, but could be slightly stronger to fully align with the request. The email is grammatically correct and mostly complete, though it could include more specific details or personal touches to enhance completeness. Overall, it is a well-constructed farewell email."
-    }
-  },
-  {
-    "eval_id": "7e07afb9-3cbd-4286-9ff1-04155e46123f",
-    "timestamp": "2026-01-03T19:26:25.428980",
-    "prompt": "Resign email from my current role.\n\ntone: formal",
-    "subject": "Resignation Notice",
-    "body": "Hi [Manager's Name],\n\nI hope this message finds you well. I am writing to formally resign from my position at True Startup, effective [Last Working Day, typically two weeks from the date of the email].\n\nI would like to express my gratitude for the opportunities I have had during my time here. I have greatly appreciated the support and guidance from you and the team.\n\nPlease let me know how I can assist during the transition period. I wish the company continued success in the future.\n\nSincerely,\nSP",
-    "scores": {
-      "intent_accuracy": 9,
-      "tone_alignment": 8,
-      "clarity": 9,
-      "professionalism": 8,
-      "completeness": 7,
-      "grammar": 10,
-      "overall_score": 8,
-      "explanation": "The email effectively communicates the intent to resign, maintaining a formal tone throughout. It is clear and grammatically correct, demonstrating professionalism. However, it could be improved by including a specific last working day and addressing the manager by name to enhance completeness and personalization. The tone, while formal, could be slightly more polished to fully align with the requested tone."
+      "explanation": "The email effectively communicates a farewell message, aligning well with the formal tone requested. It is clear and professional, with impeccable grammar. However, the use of 'Hi' as a greeting slightly detracts from the formality, and the email could be more complete by including a more formal closing or additional details about the transition. Overall, it is a well-crafted email that meets the user's request."
     }
   }
 ]
