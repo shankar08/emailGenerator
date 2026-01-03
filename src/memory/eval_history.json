@@ -168,5 +168,22 @@
       "overall_score": 8,
       "explanation": "The email effectively communicates the intent to request an extension, maintaining a formal tone throughout. The clarity is high, as the request is straightforward and easy to understand. Professionalism is slightly lacking due to the informal greeting 'Hi Professor,' which could be improved to 'Dear Professor [Last Name],' to better align with the formal tone. Completeness is slightly lacking as it does not specify the new deadline being requested or provide details about the unforeseen circumstances. Grammar is flawless, contributing to the overall effectiveness of the email."
     }
+  },
+  {
+    "eval_id": "261547df-5a3b-4c51-85ac-11da9cced6da",
+    "timestamp": "2026-01-03T19:35:57.183268",
+    "prompt": "Create email to Guitar Center's training department inquiring about instructor opportunities.\n\ntone: formal",
+    "subject": "Inquiry Regarding Instructor Opportunities",
+    "body": "Hi Guitar Center Training Department,\n\nI hope this message finds you well. I am writing to inquire about potential instructor opportunities within your esteemed organization. I am eager to learn more about any available positions and the qualifications required.\n\nThank you for your time and consideration. I look forward to your response.\n\nSincerely,\nSP",
+    "scores": {
+      "intent_accuracy": 9,
+      "tone_alignment": 8,
+      "clarity": 9,
+      "professionalism": 8,
+      "completeness": 7,
+      "grammar": 10,
+      "overall_score": 8,
+      "explanation": "The email effectively communicates the intent to inquire about instructor opportunities, aligning well with the formal tone requested. It is clear and grammatically correct, maintaining professionalism throughout. However, it could be more complete by including specific details about the sender's qualifications or experience, which would enhance the inquiry and demonstrate genuine interest. Additionally, addressing the recipient with a more formal greeting, such as 'Dear Guitar Center Training Department,' would better align with the formal tone."
+    }
   }
 ]
