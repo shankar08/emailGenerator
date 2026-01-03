@@ -117,5 +117,22 @@
       "overall_score": 9,
       "explanation": "The email effectively communicates the intent to resign, aligning well with the requested casual tone. It is clear and grammatically correct. However, it could be slightly more professional by including a specific last working day and offering more details on the transition process. Overall, it fulfills the user's request with minor areas for improvement."
     }
+  },
+  {
+    "eval_id": "b325e2c9-e056-4555-a9af-a7459cc5e5bb",
+    "timestamp": "2026-01-03T19:21:26.892064",
+    "prompt": "Compose an email to welcome all the new hires in town hall meeting.\n\ntone: formal",
+    "subject": "Welcome to Our New Hires - Town Hall Meeting Invitation",
+    "body": "Hi Team,\n\nI hope this message finds you well. I am pleased to announce that we will be holding a Town Hall meeting to welcome all our new hires. This meeting will provide an excellent opportunity for everyone to get acquainted and to learn more about our company culture and values.\n\nPlease join us on [insert date and time] at [insert location/virtual link]. Your presence will be greatly appreciated as we celebrate the newest members of our team.\n\nThank you, and I look forward to seeing you all there.\n\nSincerely,\nSP",
+    "scores": {
+      "intent_accuracy": 8,
+      "tone_alignment": 7,
+      "clarity": 8,
+      "professionalism": 7,
+      "completeness": 6,
+      "grammar": 9,
+      "overall_score": 7,
+      "explanation": "The email generally fulfills the intent of welcoming new hires to a town hall meeting, but it lacks specific details such as the date, time, and location, which affects completeness. The tone is somewhat formal but could be more polished to fully align with the requested formal tone. The language is clear and grammatically correct, but the use of 'Hi Team' and 'I hope this message finds you well' is slightly informal for a formal setting. Overall, the email is professional but could be improved with more specific details and a more consistently formal tone."
+    }
   }
 ]
