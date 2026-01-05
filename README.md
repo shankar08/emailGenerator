@@ -60,14 +60,18 @@ Structured outputs are passed downstream until a final, polished email is produc
 
 ```mermaid
 graph TD
-    A[Input Parser] --> B[Intent Detector]
-    B --> C[Tone Stylist]
-    C --> D[Draft Writer]
+    A[Input Parser Agent] --> B[Intent Detection Agent]
+    B --> C[Tone Stylist Agent]
+    C --> D[Draft Writer Agent]
     D --> E[Personalization Agent]
     E --> F[Review Agent]
     F --> G[Router Agent]
+
     G -- Rewrite Needed --> D
-    G -- Complete --> H[Final Output]
+    G -- Approved --> H[Final Email Output]
+
+    H --> I[LLM Judge / Evaluation]
+    I --> J[Eval Scores + Explanation]
 ```
 
 **Description:**
