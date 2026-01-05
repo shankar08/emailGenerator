@@ -175,7 +175,11 @@ The app uses a structured prompt logic to extract and transform user input into 
    - The generated draft is further personalized (e.g., inserting sender name, signature) and reviewed for grammar, tone, and clarity.
 
 6. **Output:**
+
    - The final draft is presented to the user for editing, export, or saving to history.
+
+7. **Eval:**
+   - The Eval tab contains Structured scores and explanation of email using LLM Judge to evaluate the email
 
 ---
 
@@ -187,6 +191,7 @@ The app uses a structured prompt logic to extract and transform user input into 
     4.	Generate the email
     5.	Review agent traces
     6.	Edit, export, or save the draft
+    7.   Independently evaluates the final email using LLM as a judge (Structured scores and explanation)
 
 ## Requirements
 
