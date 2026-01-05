@@ -212,6 +212,10 @@ The app uses a structured prompt logic to extract and transform user input into 
 
 - export OPENAI_API_KEY="your_api_key"
 
+- export GITHUB_TOKEN = "your_git_hub_token"
+
+- export REPO_NAME = "username/reponame"
+
 **Run Locally**
 
 - streamlit run streamlit_app.py
