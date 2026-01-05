@@ -202,5 +202,22 @@
       "overall_score": 7,
       "explanation": "The email captures the casual tone requested and is grammatically correct. However, it lacks specific details about the son's growth and development, making it incomplete. The intent is somewhat accurate as it initiates a conversation about the son's development but doesn't provide enough context or questions to guide the discussion. Professionalism is moderate due to the casual tone, which is appropriate for the request but may not suit all recipients. Overall, the email is clear but could benefit from more detail to fully meet the user's request."
     }
+  },
+  {
+    "eval_id": "df553c67-6980-465b-978b-aee279da1cd4",
+    "timestamp": "2026-01-05T02:55:16.415692",
+    "prompt": "help me compose a resignation email because I found a better job. \n\ntone: formal",
+    "subject": "Resignation Notice",
+    "body": "Hi [Recipient's Name],\n\nI hope this message finds you well. I am writing to formally resign from my position at Sian Co Ltd, effective [Last Working Day, typically two weeks from the date of the email]. I have accepted a new opportunity that I believe aligns better with my career goals.\n\nI would like to express my gratitude for the support and opportunities I have received during my time at Sian Co Ltd. I have greatly appreciated the chance to work with such a talented team and will carry the experiences I have gained here into my future endeavors.\n\nPlease let me know how I can assist during the transition period. I wish the company continued success in the future.\n\nSincerely,\nSP",
+    "scores": {
+      "intent_accuracy": 9,
+      "tone_alignment": 9,
+      "clarity": 9,
+      "professionalism": 9,
+      "completeness": 8,
+      "grammar": 10,
+      "overall_score": 9,
+      "explanation": "The generated email effectively communicates the intent of resignation due to a better job opportunity, aligning well with the requested formal tone. It is clear, professional, and grammatically correct. However, it could be slightly more complete by including a specific offer to help with the transition, such as training a replacement or completing outstanding projects. Overall, it is a well-crafted resignation email."
+    }
   }
 ]
