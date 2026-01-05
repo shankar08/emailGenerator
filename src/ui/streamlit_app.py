@@ -15,7 +15,6 @@ from datetime import datetime
 
 import streamlit as st
 import openai
-import matplotlib.pyplot as plt
 from langsmith import traceable
 
 from workflow.langgraph_flow import run_email_workflow
