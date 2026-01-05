@@ -95,6 +95,7 @@ Email-Generator/
 ├── Dockerfile                     # Docker setup, config details
 ├── data
 │   └──tone_samples.json           # Tones samples
+├──runtime.txt                     # Python version
 ├── src/
 │   ├── ui/
 │   │   └── streamlit_app.py       # UI components, forms, preview, export
@@ -119,7 +120,6 @@ Email-Generator/
 │   │   └── eval_history.json
 │   ├── integrations/
 │   │   └── llm_client.py          # OpenAI LLM
-│   ├──runtime.txt                # Python version
 │   │
 │   ├──data/
 │   │    └── tone_samples.json
@@ -222,4 +222,5 @@ Sample voice input files are available in `src/example_voice_inputs/`.
 ## Deployment
 
 **Streamlit Cloud:** https://appapppy-tp7ghummmwsicrrwbvraws.streamlit.app
+
 **Docker** Dockerfile has all the necessary setup for deployment in any cloud container. I have locally setup docker container and it works like a champ.
