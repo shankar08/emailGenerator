@@ -92,7 +92,9 @@ Email-Generator/
 ├── streamlit_app.py               # Streamlit Cloud entrypoint (thin UI bootstrap)
 ├── requirements.txt               # Python dependencies
 ├── README.md                      # Architecture, setup, and usage details
-│
+├── Dockerfile                     # Docker setup, config details
+├── data
+│   └──tone_samples.json           # Tones samples
 ├── src/
 │   ├── ui/
 │   │   └── streamlit_app.py       # UI components, forms, preview, export
@@ -117,13 +119,14 @@ Email-Generator/
 │   │   └── eval_history.json
 │   ├── integrations/
 │   │   └── llm_client.py          # OpenAI LLM
-│   └── runtime.txt                # Python version
-├── data/
-│   └── tone_samples.json
-│   └── runtime.txt                # Python version
-├── eval/
-│   └── email_eval_set.json        # data set used by LLM to refer for evaluating the emails
-|   └── eval_runner.py             # Main function to evaluated generated email.
+│   ├──runtime.txt                # Python version
+│   │
+│   ├──data/
+│   │    └── tone_samples.json
+│   │    └── runtime.txt                # Python version
+│   └──eval/
+│        └── email_eval_set.json        # data set used by LLM to refer for evaluating the emails
+|        └── eval_runner.py             # Main function to evaluated generated email.
 ```
 
 ---
@@ -219,3 +222,4 @@ Sample voice input files are available in `src/example_voice_inputs/`.
 ## Deployment
 
 **Streamlit Cloud:** https://appapppy-tp7ghummmwsicrrwbvraws.streamlit.app
+**Docker** Dockerfile has all the necessary setup for deployment in any cloud container. I have locally setup docker container and it works like a champ.
