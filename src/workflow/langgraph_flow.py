@@ -13,16 +13,16 @@ from langgraph.checkpoint.memory import InMemorySaver
 
 from langchain_core.messages import HumanMessage, BaseMessage
 
-from agents.input_parser_agent import InputParserAgent
-from agents.intent_detection_agent import IntentDetectionAgent
-from agents.tone_stylist_agent import ToneStylistAgent
-from agents.draft_writer_agent import DraftWriterAgent
-from agents.personalization_agent import PersonalizationAgent
-from agents.review_agent import ReviewAgent
-from agents.router_agent import RouterAgent
+from src.agents.input_parser_agent import InputParserAgent
+from src.agents.intent_detection_agent import IntentDetectionAgent
+from src.agents.tone_stylist_agent import ToneStylistAgent
+from src.agents.draft_writer_agent import DraftWriterAgent
+from src.agents.personalization_agent import PersonalizationAgent
+from src.agents.review_agent import ReviewAgent
+from src.agents.router_agent import RouterAgent
 
-from integrations.llm_client import make_openai_llm
-from memory.store import get_profile, upsert_profile
+from src.integrations.llm_client import make_openai_llm
+from src.memory.store import get_profile, upsert_profile
 
 import time
 from copy import deepcopy

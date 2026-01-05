@@ -17,11 +17,20 @@ import streamlit as st
 import openai
 from langsmith import traceable
 
-from workflow.langgraph_flow import run_email_workflow
-from integrations.llm_client import make_openai_llm
-from eval.eval_runner import validate_scores
+# ---- Path bootstrap (REQUIRED for Streamlit) ----
+import sys
+from pathlib import Path
 
-from memory.store import (
+ROOT = Path(__file__).resolve().parents[2]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+# -----------------------------------------------
+
+from src.workflow.langgraph_flow import run_email_workflow
+from src.integrations.llm_client import make_openai_llm
+from src.eval.eval_runner import validate_scores
+
+from src.memory.store import (
     get_profile,
     upsert_profile,
     save_eval,

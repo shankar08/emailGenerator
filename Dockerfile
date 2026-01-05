@@ -40,6 +40,12 @@ RUN pip install --no-cache-dir --upgrade pip \
 # -----------------------------
 COPY . .
 
+COPY data ./data
+
+COPY src/eval /app/src/eval
+
+ENV PYTHONPATH=/app/src
+
 # -----------------------------
 # Expose Streamlit port
 # -----------------------------

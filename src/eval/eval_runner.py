@@ -1,6 +1,6 @@
 import json
-from integrations.llm_client import make_openai_llm
-from workflow.langgraph_flow import run_email_workflow
+from src.integrations.llm_client import make_openai_llm
+from src.workflow.langgraph_flow import run_email_workflow
 
 llm = make_openai_llm(model="gpt-4o", temperature=0)
 
