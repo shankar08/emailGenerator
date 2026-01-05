@@ -185,5 +185,22 @@
       "overall_score": 8,
       "explanation": "The email effectively communicates the intent to inquire about instructor opportunities, aligning well with the formal tone requested. It is clear and grammatically correct, maintaining professionalism throughout. However, it could be more complete by including specific details about the sender's qualifications or experience, which would enhance the inquiry and demonstrate genuine interest. Additionally, addressing the recipient with a more formal greeting, such as 'Dear Guitar Center Training Department,' would better align with the formal tone."
     }
+  },
+  {
+    "eval_id": "fb93169c-f15c-4a9d-b7b7-292818ddaa6d",
+    "timestamp": "2026-01-05T02:52:31.518005",
+    "prompt": "Write an email to evaluate the growth development of my son.\n\ntone: casual",
+    "subject": "Quick Check-In on [Son's Name]'s Growth",
+    "body": "Hey there!\n\nHope you’re doing well! I just wanted to take a moment to chat about [Son's Name] and how he’s been growing and developing lately. It’s been amazing to see him reach new milestones, and I’d love to hear your thoughts on how he’s doing from your perspective.\n\nLooking forward to catching up!\n\nThanks,\nSP\n\nBest regards,\nSP",
+    "scores": {
+      "intent_accuracy": 7,
+      "tone_alignment": 9,
+      "clarity": 8,
+      "professionalism": 6,
+      "completeness": 5,
+      "grammar": 9,
+      "overall_score": 7,
+      "explanation": "The email captures the casual tone requested and is grammatically correct. However, it lacks specific details about the son's growth and development, making it incomplete. The intent is somewhat accurate as it initiates a conversation about the son's development but doesn't provide enough context or questions to guide the discussion. Professionalism is moderate due to the casual tone, which is appropriate for the request but may not suit all recipients. Overall, the email is clear but could benefit from more detail to fully meet the user's request."
+    }
   }
 ]
