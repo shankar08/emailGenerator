@@ -89,6 +89,8 @@ graph TD
 
 ## Architecture
 
+[View Architecture PDF](https://github.com/shankar08/emailGenerator/blob/main/Email_Generator.pdf)
+
 The application is organized as follows:
 
 ```text
