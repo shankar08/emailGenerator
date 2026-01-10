@@ -236,5 +236,22 @@
       "overall_score": 8,
       "explanation": "The email accurately conveys the intent of requesting a loan for a car purchase, scoring high in intent accuracy. The tone is mostly formal, but the greeting 'Hi Citi Bank Team' could be more formal, such as 'Dear Citi Bank Team,' which affects tone alignment. Clarity is strong, as the purpose and request are clearly stated. Professionalism is good, though it could be enhanced with a more formal closing and additional details about the loan request. Completeness is lacking slightly, as the email could include more specific information about the car purchase or the applicant's financial situation. Grammar is flawless. Overall, the email is effective but could be improved in tone and completeness for a higher score."
     }
+  },
+  {
+    "eval_id": "a78bf76a-770a-40c8-8a5f-868d85e8ac9d",
+    "timestamp": "2026-01-10T23:57:28.073710",
+    "prompt": "Generate an email that clearly demands immediate action on an overdue deliverable. The opening sentence must state the problem and the required action without hedging. Explicitly reference the original deadline, describe the current business impact of the delay, and clearly specify what must be delivered and the exact deadline for completion. Reinforce ownership, urgency, and accountability in a firm, professional tone without hostility. Conclude with a decisive call to action, outlining next steps and consequences if the issue is not resolved promptly. Assume the recipient is fully responsible for the deliverable and that timely resolution is critical.\n\ntone: formal",
+    "subject": "Immediate Action Required: Overdue Deliverable",
+    "body": "Hi [Name],\n\nI am writing to address the overdue deliverable that was originally due on [insert original deadline]. This delay is currently impacting our project timeline and overall business operations, which necessitates immediate action on your part.\n\nPlease ensure that the required deliverable, [specify the deliverable], is completed and submitted by [insert new deadline]. It is critical that you take ownership of this task and prioritize its completion to mitigate further impact on our operations.\n\nI expect to receive the completed deliverable by the specified deadline. Should this issue remain unresolved, we will need to discuss the implications for your responsibilities moving forward.\n\nThank you for your prompt attention to this matter.\n\nSincerely,\nSP",
+    "scores": {
+      "intent_accuracy": 9,
+      "tone_alignment": 9,
+      "clarity": 8,
+      "professionalism": 9,
+      "completeness": 8,
+      "grammar": 10,
+      "overall_score": 9,
+      "explanation": "The email effectively communicates the urgency and need for immediate action on the overdue deliverable, aligning well with the user's request. The tone is formal and professional, maintaining a firm stance without hostility. The original deadline and the new deadline are placeholders, which slightly affects completeness. The email clearly states the problem, the required action, and the consequences of not meeting the new deadline, but could benefit from more specific details about the business impact. Overall, the email is well-structured and meets most of the user's requirements."
+    }
   }
 ]
