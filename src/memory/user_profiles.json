@@ -163,6 +163,10 @@
       {
         "subject": "Immediate Action Required: Overdue Deliverable",
         "body": "Hi [Name],\n\nI am writing to address the overdue deliverable that was originally due on [insert original deadline]. This delay is currently impacting our project timeline and overall business operations, which necessitates immediate action on your part.\n\nPlease ensure that the required deliverable, [specify the deliverable], is completed and submitted by [insert new deadline]. It is critical that you take ownership of this task and prioritize its completion to mitigate further impact on our operations.\n\nI expect to receive the completed deliverable by the specified deadline. Should this issue remain unresolved, we will need to discuss the implications for your responsibilities moving forward.\n\nThank you for your prompt attention to this matter.\n\nSincerely,\nSP"
+      },
+      {
+        "subject": "Welcome Aboard! Join Us for a Fishing Trip to Alaska!",
+        "body": "Hey Team!\n\nHope you’re all doing great! I’m super excited to welcome all our new employees to Sian Co Ltd. To kick things off, we’re planning a fun fishing trip to Alaska, and we’d love for you to join us!\n\nIt’ll be a fantastic opportunity to bond, relax, and enjoy some beautiful scenery together. Plus, who doesn’t love a good fishing story?\n\nLet me know if you’re interested, and I’ll share more details!\n\nCheers,\nSP"
       }
     ]
   }
