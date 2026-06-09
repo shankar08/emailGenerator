@@ -253,5 +253,22 @@
       "overall_score": 9,
       "explanation": "The email effectively communicates the urgency and need for immediate action on the overdue deliverable, aligning well with the user's request. The tone is formal and professional, maintaining a firm stance without hostility. The original deadline and the new deadline are placeholders, which slightly affects completeness. The email clearly states the problem, the required action, and the consequences of not meeting the new deadline, but could benefit from more specific details about the business impact. Overall, the email is well-structured and meets most of the user's requirements."
     }
+  },
+  {
+    "eval_id": "d5087de9-8790-4195-859d-31f2061c9c9c",
+    "timestamp": "2026-06-09T13:38:09.974627",
+    "prompt": "Write an email to welcome all new employee for a fishing trip to Alaska. \n\ntone: casual",
+    "subject": "Welcome Aboard! Join Us for a Fishing Trip to Alaska!",
+    "body": "Hey Team!\n\nHope you’re all doing great! I’m super excited to welcome all our new employees to Sian Co Ltd. To kick things off, we’re planning a fun fishing trip to Alaska, and we’d love for you to join us!\n\nIt’ll be a fantastic opportunity to bond, relax, and enjoy some beautiful scenery together. Plus, who doesn’t love a good fishing story?\n\nLet me know if you’re interested, and I’ll share more details!\n\nCheers,\nSP",
+    "scores": {
+      "intent_accuracy": 9,
+      "tone_alignment": 9,
+      "clarity": 9,
+      "professionalism": 7,
+      "completeness": 8,
+      "grammar": 10,
+      "overall_score": 9,
+      "explanation": "The email effectively welcomes new employees and invites them to a fishing trip to Alaska, aligning well with the casual tone requested. The intent is clear, and the message is concise and engaging. While the tone is casual, it slightly lacks professionalism due to the informal language, which might not suit all workplace cultures. The email is mostly complete but could include more details about the trip, such as dates or what to bring. Grammar is flawless, contributing to the overall clarity and readability of the email."
+    }
   }
 ]
