@@ -270,5 +270,22 @@
       "overall_score": 9,
       "explanation": "The email effectively welcomes new employees and invites them to a fishing trip to Alaska, aligning well with the casual tone requested. The intent is clear, and the message is concise and engaging. While the tone is casual, it slightly lacks professionalism due to the informal language, which might not suit all workplace cultures. The email is mostly complete but could include more details about the trip, such as dates or what to bring. Grammar is flawless, contributing to the overall clarity and readability of the email."
     }
+  },
+  {
+    "eval_id": "278e5778-e108-4875-8dca-2bb3018e2952",
+    "timestamp": "2026-06-09T17:07:21.614647",
+    "prompt": "Write an email to onboard a new client. \n\ntone: formal",
+    "subject": "Welcome to Testing - Onboarding Process",
+    "body": "Hi [Client Name],\n\nI hope this message finds you well. I am writing to formally welcome you to Testing and to initiate the onboarding process. We are excited to have you as our client and look forward to a successful partnership.\n\nPlease find attached the necessary documents and information to get started. Should you have any questions or require further assistance, do not hesitate to reach out.\n\nBest regards,\nSP",
+    "scores": {
+      "intent_accuracy": 8,
+      "tone_alignment": 7,
+      "clarity": 8,
+      "professionalism": 7,
+      "completeness": 6,
+      "grammar": 9,
+      "overall_score": 7,
+      "explanation": "The email generally fulfills the intent of onboarding a new client, but it lacks some elements of formality expected in a formal tone. The greeting 'Hi' is informal, and the closing 'Best regards' could be more formal. The email is clear and grammatically correct, but it lacks details such as a more formal introduction of the company and specific next steps in the onboarding process. The email could be more complete by providing a contact name or department for further assistance."
+    }
   }
 ]
