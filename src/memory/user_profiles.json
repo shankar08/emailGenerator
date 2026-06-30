@@ -171,6 +171,10 @@
       {
         "subject": "Welcome to Testing - Onboarding Process",
         "body": "Hi [Client Name],\n\nI hope this message finds you well. I am writing to formally welcome you to Testing and to initiate the onboarding process. We are excited to have you as our client and look forward to a successful partnership.\n\nPlease find attached the necessary documents and information to get started. Should you have any questions or require further assistance, do not hesitate to reach out.\n\nBest regards,\nSP"
+      },
+      {
+        "subject": "Welcome to the Team",
+        "body": "Hi [Name],\n\nI hope this message finds you well. I would like to extend a warm welcome to you as you join our team at Testing. We are excited to have you on board and look forward to your contributions.\n\nPlease feel free to reach out if you have any questions or need assistance as you settle in.\n\nBest regards,\nSP"
       }
     ]
   }
