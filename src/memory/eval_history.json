@@ -287,5 +287,22 @@
       "overall_score": 7,
       "explanation": "The email generally fulfills the intent of onboarding a new client, but it lacks some elements of formality expected in a formal tone. The greeting 'Hi' is informal, and the closing 'Best regards' could be more formal. The email is clear and grammatically correct, but it lacks details such as a more formal introduction of the company and specific next steps in the onboarding process. The email could be more complete by providing a contact name or department for further assistance."
     }
+  },
+  {
+    "eval_id": "2df76943-55d3-4a39-a944-7fc6836340c1",
+    "timestamp": "2026-06-30T20:41:02.665494",
+    "prompt": "Write an email to welcome new hire?\n\ntone: formal",
+    "subject": "Welcome to the Team",
+    "body": "Hi [Name],\n\nI hope this message finds you well. I would like to extend a warm welcome to you as you join our team at Testing. We are excited to have you on board and look forward to your contributions.\n\nPlease feel free to reach out if you have any questions or need assistance as you settle in.\n\nBest regards,\nSP",
+    "scores": {
+      "intent_accuracy": 8,
+      "tone_alignment": 6,
+      "clarity": 8,
+      "professionalism": 7,
+      "completeness": 6,
+      "grammar": 9,
+      "overall_score": 7,
+      "explanation": "The email successfully welcomes the new hire, fulfilling the intent. However, the tone is not fully formal, as it uses a casual greeting ('Hi') and lacks a formal closing. Clarity is good, as the message is straightforward. Professionalism is adequate but could be improved with a more formal tone and detailed information about the company or role. Completeness is lacking because it doesn't provide specific details about the new hire's role, team, or next steps. Grammar is correct, contributing positively to the overall score."
+    }
   }
 ]
